@@ -1,0 +1,109 @@
+.share-container {
+  width: 100%;
+  max-width: var(--viewport-width);
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--color-bg);
+}
+
+.share-scroll {
+  padding: calc(var(--space-24) + var(--safe-area-top)) var(--screen-padding-x)
+    calc(var(--space-32) + var(--safe-area-bottom));
+}
+
+.share-eyebrow {
+  font-size: var(--font-size-eyebrow);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  text-transform: uppercase;
+}
+
+.share-headline {
+  margin-top: var(--space-12);
+  font-size: var(--font-size-headline-lg);
+  line-height: var(--line-height-headline);
+  font-weight: 800;
+}
+
+.taste-card {
+  margin-top: var(--space-24);
+  padding: var(--space-24);
+  border-radius: var(--radius-card);
+  background: var(--color-mint-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.taste-card-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-caption);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  color: var(--color-text-tertiary);
+}
+
+.taste-card-name {
+  font-size: var(--font-size-headline);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.taste-card-collage {
+  position: relative;
+}
+
+.taste-card-collage img {
+  width: 100%;
+  height: auto;
+}
+
+.taste-card-sticker {
+  position: absolute;
+  bottom: 8%;
+  right: 4%;
+  max-width: 70%;
+  padding: var(--space-8) var(--space-12);
+  background: var(--color-mint);
+  color: #0d2b28;
+  font-weight: 700;
+  font-size: var(--font-size-caption);
+  border-radius: var(--radius-sm);
+  border-bottom-right-radius: 4px;
+}
+
+.taste-card-divider {
+  border-top: 1px solid rgba(22, 22, 31, 0.12);
+}
+
+.taste-card-flow {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-tertiary);
+}
+
+.taste-card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-tertiary);
+  letter-spacing: var(--letter-spacing-eyebrow);
+}
+
+.share-button-row {
+  margin-top: var(--space-24);
+  display: flex;
+  gap: var(--space-12);
+}
+
+.share-button-row > * {
+  flex: 1;
+}
+
+.share-link-list {
+  margin-top: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+}

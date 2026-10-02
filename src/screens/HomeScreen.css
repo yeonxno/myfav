@@ -1,0 +1,59 @@
+.home-collage {
+  position: relative;
+  margin-top: var(--space-32);
+}
+
+.home-collage img {
+  width: 100%;
+  height: auto;
+}
+
+.home-collage-bubble {
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  max-width: 60%;
+  padding: var(--space-12) var(--space-16);
+  background: var(--color-mint);
+  color: #0d2b28;
+  border-radius: var(--radius-sm);
+  border-bottom-right-radius: 4px;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+}
+
+.home-collage-caption {
+  position: absolute;
+  bottom: -4%;
+  right: 2%;
+  font-size: var(--font-size-caption);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.home-flow-row {
+  margin-top: var(--space-20);
+  text-align: center;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+}
+
+.home-flow-categories {
+  margin-top: var(--space-8);
+  text-align: center;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-tertiary);
+  letter-spacing: var(--letter-spacing-eyebrow);
+}
+
+.home-helper-text {
+  margin-top: var(--space-16);
+  text-align: center;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,17 @@
+.info-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  margin-top: var(--space-24);
+}
+
+.info-links button {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-tertiary);
+}
+
+.info-links span {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-tertiary);
+}

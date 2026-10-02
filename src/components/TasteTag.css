@@ -1,0 +1,23 @@
+.taste-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.taste-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-chip);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-size: var(--font-size-caption);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.taste-tag-emphasized {
+  background: var(--color-mint);
+  border-color: var(--color-mint);
+  color: #0d2b28;
+}

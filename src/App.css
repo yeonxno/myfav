@@ -1,0 +1,33 @@
+.app-boot-splash {
+  width: 100%;
+  max-width: var(--viewport-width);
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--color-bg);
+}
+
+.app-boot-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  text-align: center;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+}
+
+.app-boot-error-hint {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-caption);
+}
+
+.app-boot-error button {
+  margin-top: var(--space-16);
+  padding: var(--space-12) var(--space-24);
+  border-radius: var(--radius-pill);
+  background: var(--color-mint);
+  color: #0d2b28;
+  font-weight: 700;
+}

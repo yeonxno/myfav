@@ -1,0 +1,20 @@
+.legal-summary-box {
+  margin-top: var(--space-20);
+  padding: var(--space-16);
+  border-radius: var(--radius-sm);
+  background: var(--color-mint-soft);
+}
+
+.legal-summary-label {
+  font-size: var(--font-size-caption);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  color: var(--color-mint-dark);
+  margin-bottom: var(--space-8);
+}
+
+.legal-summary-text {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,28 @@
+.notice-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-16);
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--color-border-strong);
+  background: transparent;
+  text-align: left;
+}
+
+.notice-box-clickable:active {
+  opacity: 0.7;
+}
+
+.notice-box-icon {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.notice-box-text {
+  flex: 1;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+}

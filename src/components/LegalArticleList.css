@@ -1,0 +1,31 @@
+.legal-article-list {
+  margin-top: var(--space-24);
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-article {
+  padding: var(--space-20) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.legal-article-no {
+  font-size: var(--font-size-caption);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-eyebrow);
+  color: var(--color-text-tertiary);
+}
+
+.legal-article-title {
+  margin-top: var(--space-8);
+  font-size: var(--font-size-subhead);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.legal-article-body {
+  margin-top: var(--space-8);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
+}

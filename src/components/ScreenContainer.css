@@ -1,0 +1,26 @@
+.screen-container {
+  width: 100%;
+  max-width: var(--viewport-width);
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.screen-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-24) var(--screen-padding-x) var(--space-32);
+  padding-top: calc(var(--space-24) + var(--safe-area-top));
+}
+
+.screen-scroll-static {
+  overflow: visible;
+}
+
+.screen-footer {
+  padding: var(--space-16) var(--screen-padding-x) calc(var(--space-20) + var(--safe-area-bottom));
+  background: linear-gradient(to top, var(--color-bg) 60%, rgba(246, 243, 236, 0));
+}

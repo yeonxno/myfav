@@ -1,0 +1,36 @@
+.main-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-20) var(--space-24);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-subhead);
+  font-weight: 700;
+  transition: opacity var(--transition-fast);
+}
+
+.main-button-mint {
+  background: var(--color-mint);
+  color: #0d2b28;
+}
+
+.main-button-dark {
+  background: var(--color-text-primary);
+  color: var(--color-surface);
+}
+
+.main-button:disabled {
+  background: var(--color-disabled-bg);
+  color: var(--color-disabled-text);
+  cursor: not-allowed;
+}
+
+.main-button:not(:disabled):active {
+  opacity: 0.85;
+}
+
+.main-button-arrow {
+  font-size: 18px;
+  line-height: 1;
+}

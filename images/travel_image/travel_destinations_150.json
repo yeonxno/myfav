@@ -1,0 +1,4275 @@
+{
+  "meta": {
+    "project": "취향 번역기",
+    "purpose": "travel recommendation card images",
+    "version": 1,
+    "count": {
+      "global": 100,
+      "korea": 50,
+      "total": 150
+    },
+    "moods": {
+      "warm": "따뜻함",
+      "cool": "차가움",
+      "passion": "열정",
+      "nature": "자연",
+      "dreamy": "몽환",
+      "night": "도시의 밤",
+      "retro": "레트로"
+    },
+    "axes": [
+      {
+        "key": "quiet_energetic",
+        "left": "고요한",
+        "right": "에너지 있는"
+      },
+      {
+        "key": "analog_digital",
+        "left": "아날로그",
+        "right": "디지털"
+      },
+      {
+        "key": "dreamy_vivid",
+        "left": "몽환적인",
+        "right": "선명한"
+      },
+      {
+        "key": "lyrical_abstract",
+        "left": "서정적인",
+        "right": "추상적인"
+      },
+      {
+        "key": "warm_cool",
+        "left": "따뜻한",
+        "right": "차가운"
+      },
+      {
+        "key": "familiar_new",
+        "left": "익숙한",
+        "right": "새로운"
+      },
+      {
+        "key": "solo_together",
+        "left": "혼자만의",
+        "right": "함께하는"
+      },
+      {
+        "key": "calm_dramatic",
+        "left": "잔잔한",
+        "right": "극적인"
+      }
+    ],
+    "axes_scale": "-2(left) ~ 2(right)",
+    "generation": {
+      "width": 1216,
+      "height": 832,
+      "steps": 30,
+      "cfg": 6.5,
+      "sampler": "dpmpp_2m",
+      "scheduler": "karras"
+    },
+    "negative_prompt": "text, watermark, logo, signature, caption, cartoon, illustration, painting, anime, 3d render, cgi, lowres, blurry, noisy, oversaturated, overexposed, distorted perspective, deformed architecture, duplicate buildings, jpeg artifacts, frame, border, people in close-up, deformed faces"
+  },
+  "destinations": [
+    {
+      "id": "G001",
+      "scope": "global",
+      "name_ko": "에펠탑",
+      "name_en": "Eiffel Tower",
+      "country": "프랑스",
+      "region": "파리",
+      "category": "landmark",
+      "mood": "warm",
+      "tags": [
+        "romantic",
+        "golden",
+        "cinematic"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -2,
+        2,
+        0
+      ],
+      "prompt": "Eiffel Tower, Paris, view from Trocadero gardens, autumn trees, golden hour, soft warm sunlight, wide angle architectural photography, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10001,
+      "filename": "에펠탑_황금빛단풍_로맨틱.png"
+    },
+    {
+      "id": "G002",
+      "scope": "global",
+      "name_ko": "산토리니 이아 마을",
+      "name_en": "Oia, Santorini",
+      "country": "그리스",
+      "region": "산토리니",
+      "category": "coast",
+      "mood": "warm",
+      "tags": [
+        "romantic",
+        "bright",
+        "serene"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Oia village, Santorini, whitewashed cliffside houses, blue domed church, Aegean sea, sunset, pink and orange sky, elevated view, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10002,
+      "filename": "산토리니이아마을_파란돔노을_낭만.png"
+    },
+    {
+      "id": "G003",
+      "scope": "global",
+      "name_ko": "마추픽추",
+      "name_en": "Machu Picchu",
+      "country": "페루",
+      "region": "쿠스코",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "mystic",
+        "ancient",
+        "misty"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Machu Picchu, Inca citadel ruins, Huayna Picchu peak, morning mist, low clouds over Andes, soft diffused light, high vantage point, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10003,
+      "filename": "마추픽추_구름속유적_신비.png"
+    },
+    {
+      "id": "G004",
+      "scope": "global",
+      "name_ko": "그랜드 캐니언",
+      "name_en": "Grand Canyon",
+      "country": "미국",
+      "region": "애리조나",
+      "category": "nature",
+      "mood": "passion",
+      "tags": [
+        "epic",
+        "vast",
+        "dramatic"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        1,
+        2
+      ],
+      "prompt": "Grand Canyon, Arizona, layered red rock cliffs, Colorado River below, sunrise, dramatic side lighting, panoramic wide view, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10004,
+      "filename": "그랜드캐니언_붉은협곡_웅장.png"
+    },
+    {
+      "id": "G005",
+      "scope": "global",
+      "name_ko": "키르큐펠",
+      "name_en": "Kirkjufell",
+      "country": "아이슬란드",
+      "region": "스나이펠스네스",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "aurora",
+        "solitary",
+        "cold"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Kirkjufell mountain, Iceland, Kirkjufellsfoss waterfall, green aurora borealis, starry night sky, snow, long exposure, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10005,
+      "filename": "키르큐펠_초록오로라_신비.png"
+    },
+    {
+      "id": "G006",
+      "scope": "global",
+      "name_ko": "후시미 이나리 신사",
+      "name_en": "Fushimi Inari Shrine",
+      "country": "일본",
+      "region": "교토",
+      "category": "heritage",
+      "mood": "passion",
+      "tags": [
+        "vermilion",
+        "rhythmic",
+        "sacred"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        1,
+        2
+      ],
+      "prompt": "Fushimi Inari shrine, Kyoto, tunnel of vermilion torii gates, stone path, soft morning light, symmetrical leading lines, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10006,
+      "filename": "후시미이나리신사_붉은도리이_강렬.png"
+    },
+    {
+      "id": "G007",
+      "scope": "global",
+      "name_ko": "기온 거리",
+      "name_en": "Gion District",
+      "country": "일본",
+      "region": "교토",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "nostalgic",
+        "rainy",
+        "analog"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Gion district, Kyoto, traditional wooden machiya houses, wet stone street after rain, paper lanterns, blue hour, reflections, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10007,
+      "filename": "기온거리_비젖은돌길_고즈넉.png"
+    },
+    {
+      "id": "G008",
+      "scope": "global",
+      "name_ko": "아라시야마 대나무숲",
+      "name_en": "Arashiyama Bamboo Grove",
+      "country": "일본",
+      "region": "교토",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "quiet",
+        "green",
+        "slow"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Arashiyama bamboo forest, Kyoto, towering green bamboo stalks, narrow walking path, morning light rays, low angle view, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10008,
+      "filename": "아라시야마대나무숲_초록대숲길_청량.png"
+    },
+    {
+      "id": "G009",
+      "scope": "global",
+      "name_ko": "후지산과 가와구치코",
+      "name_en": "Mount Fuji and Lake Kawaguchiko",
+      "country": "일본",
+      "region": "야마나시",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "calm",
+        "iconic",
+        "clear"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Mount Fuji, Lake Kawaguchiko, snow-capped peak, mirror reflection on calm water, cherry blossoms in foreground, early morning, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10009,
+      "filename": "후지산과가와구치코_벚꽃반영_평온.png"
+    },
+    {
+      "id": "G010",
+      "scope": "global",
+      "name_ko": "시부야 스크램블 교차로",
+      "name_en": "Shibuya Scramble Crossing",
+      "country": "일본",
+      "region": "도쿄",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "urban",
+        "neon",
+        "energetic"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Shibuya Scramble Crossing, Tokyo, neon billboards, crowds crossing, rainy night, wet asphalt reflections, high angle long exposure, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10010,
+      "filename": "시부야스크램블교차로_네온횡단보도_활기.png"
+    },
+    {
+      "id": "G011",
+      "scope": "global",
+      "name_ko": "브루클린 브리지",
+      "name_en": "Brooklyn Bridge",
+      "country": "미국",
+      "region": "뉴욕",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "urban",
+        "iconic",
+        "cinematic"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Brooklyn Bridge, Manhattan skyline, New York City, blue hour, glowing city lights, suspension cables, long exposure, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10011,
+      "filename": "브루클린브리지_블루아워야경_시네마틱.png"
+    },
+    {
+      "id": "G012",
+      "scope": "global",
+      "name_ko": "센트럴파크",
+      "name_en": "Central Park",
+      "country": "미국",
+      "region": "뉴욕",
+      "category": "city",
+      "mood": "warm",
+      "tags": [
+        "autumn",
+        "cozy",
+        "nostalgic"
+      ],
+      "axes": [
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        2,
+        0
+      ],
+      "prompt": "Central Park, New York, Bow Bridge, autumn foliage, lake reflection, golden afternoon light, skyscrapers in background, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10012,
+      "filename": "센트럴파크_단풍호수반영_아늑.png"
+    },
+    {
+      "id": "G013",
+      "scope": "global",
+      "name_ko": "골든게이트 브리지",
+      "name_en": "Golden Gate Bridge",
+      "country": "미국",
+      "region": "샌프란시스코",
+      "category": "landmark",
+      "mood": "cool",
+      "tags": [
+        "foggy",
+        "iconic",
+        "airy"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "prompt": "Golden Gate Bridge, San Francisco, fog rolling over the bay, red suspension towers, early morning, elevated view from Battery Spencer, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10013,
+      "filename": "골든게이트브리지_안개위붉은다리_청량.png"
+    },
+    {
+      "id": "G014",
+      "scope": "global",
+      "name_ko": "요세미티 밸리",
+      "name_en": "Yosemite Valley",
+      "country": "미국",
+      "region": "캘리포니아",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "grand",
+        "wild",
+        "fresh"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Yosemite Valley, Tunnel View, El Capitan, Half Dome, Bridalveil Fall, clearing storm clouds, dramatic light, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10014,
+      "filename": "요세미티밸리_화강암절벽_웅장.png"
+    },
+    {
+      "id": "G015",
+      "scope": "global",
+      "name_ko": "앤털로프 캐니언",
+      "name_en": "Antelope Canyon",
+      "country": "미국",
+      "region": "애리조나",
+      "category": "nature",
+      "mood": "passion",
+      "tags": [
+        "flowing",
+        "fiery",
+        "abstract"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        1,
+        2
+      ],
+      "prompt": "Antelope Canyon, Arizona, sandstone slot canyon, flowing orange rock waves, light beam from above, low angle view, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10015,
+      "filename": "앤털로프캐니언_빛줄기협곡_신비.png"
+    },
+    {
+      "id": "G016",
+      "scope": "global",
+      "name_ko": "모뉴먼트 밸리",
+      "name_en": "Monument Valley",
+      "country": "미국",
+      "region": "유타",
+      "category": "nature",
+      "mood": "retro",
+      "tags": [
+        "western",
+        "road trip",
+        "vast"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Monument Valley, Utah, red sandstone buttes, straight desert road, sunset, warm dusty atmosphere, wide angle, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10016,
+      "filename": "모뉴먼트밸리_사막도로_자유.png"
+    },
+    {
+      "id": "G017",
+      "scope": "global",
+      "name_ko": "나이아가라 폭포",
+      "name_en": "Niagara Falls",
+      "country": "캐나다",
+      "region": "온타리오",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "powerful",
+        "misty",
+        "fresh"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Niagara Falls, Horseshoe Falls, roaring water, rising mist, rainbow, bright daylight, wide view, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10017,
+      "filename": "나이아가라폭포_무지개물보라_역동.png"
+    },
+    {
+      "id": "G018",
+      "scope": "global",
+      "name_ko": "모레인 호수",
+      "name_en": "Moraine Lake",
+      "country": "캐나다",
+      "region": "밴프",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "turquoise",
+        "alpine",
+        "clear"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Moraine Lake, Banff National Park, turquoise glacial lake, Valley of the Ten Peaks, pine forest, sunrise alpenglow, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10018,
+      "filename": "모레인호수_청록호수설산_청량.png"
+    },
+    {
+      "id": "G019",
+      "scope": "global",
+      "name_ko": "그랜드 프리즈매틱 스프링",
+      "name_en": "Grand Prismatic Spring",
+      "country": "미국",
+      "region": "옐로스톤",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "surreal",
+        "vivid",
+        "otherworldly"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Grand Prismatic Spring, Yellowstone, rainbow colored hot spring, rising steam, aerial view, vivid natural colors, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10019,
+      "filename": "그랜드프리즈매틱스프링_무지갯빛온천_초현실.png"
+    },
+    {
+      "id": "G020",
+      "scope": "global",
+      "name_ko": "나팔리 해안",
+      "name_en": "Na Pali Coast",
+      "country": "미국",
+      "region": "하와이 카우아이",
+      "category": "coast",
+      "mood": "nature",
+      "tags": [
+        "tropical",
+        "lush",
+        "wild"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Na Pali Coast, Kauai, Hawaii, emerald green sea cliffs, turquoise ocean, golden afternoon light, aerial view, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10020,
+      "filename": "나팔리해안_초록절벽해안_장엄.png"
+    },
+    {
+      "id": "G021",
+      "scope": "global",
+      "name_ko": "우유니 소금사막",
+      "name_en": "Salar de Uyuni",
+      "country": "볼리비아",
+      "region": "우유니",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "mirror",
+        "infinite",
+        "dreamy"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Salar de Uyuni, Bolivia, salt flat mirror reflection, pastel sky, twilight, infinite horizon, minimal composition, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10021,
+      "filename": "우유니소금사막_분홍빛반영_몽환.png"
+    },
+    {
+      "id": "G022",
+      "scope": "global",
+      "name_ko": "이과수 폭포",
+      "name_en": "Iguazu Falls",
+      "country": "아르헨티나",
+      "region": "미시오네스",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "powerful",
+        "lush",
+        "wild"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Iguazu Falls, Devil's Throat, massive waterfalls, lush rainforest, mist, rainbow, wide angle, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10022,
+      "filename": "이과수폭포_무지개폭포_역동.png"
+    },
+    {
+      "id": "G023",
+      "scope": "global",
+      "name_ko": "코르코바두 예수상",
+      "name_en": "Christ the Redeemer",
+      "country": "브라질",
+      "region": "리우데자네이루",
+      "category": "landmark",
+      "mood": "warm",
+      "tags": [
+        "vibrant",
+        "open",
+        "sunset"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -2,
+        2,
+        0
+      ],
+      "prompt": "Christ the Redeemer statue, Corcovado, Rio de Janeiro, Sugarloaf Mountain, Guanabara Bay, sunset, aerial perspective, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10023,
+      "filename": "코르코바두예수상_노을진전망_장엄.png"
+    },
+    {
+      "id": "G024",
+      "scope": "global",
+      "name_ko": "토레스 델 파이네",
+      "name_en": "Torres del Paine",
+      "country": "칠레",
+      "region": "파타고니아",
+      "category": "mountain",
+      "mood": "cool",
+      "tags": [
+        "rugged",
+        "wild",
+        "remote"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -2,
+        2
+      ],
+      "prompt": "Torres del Paine, Patagonia, granite towers, glacial lake, dramatic clouds, sunrise, rugged wilderness, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10024,
+      "filename": "토레스델파이네_설산호수반영_고독.png"
+    },
+    {
+      "id": "G025",
+      "scope": "global",
+      "name_ko": "페리토 모레노 빙하",
+      "name_en": "Perito Moreno Glacier",
+      "country": "아르헨티나",
+      "region": "파타고니아",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "icy",
+        "massive",
+        "pure"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Perito Moreno Glacier, Patagonia, blue ice wall, Lake Argentino, crisp daylight, wide view, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10025,
+      "filename": "페리토모레노빙하_푸른빙벽_차가움.png"
+    },
+    {
+      "id": "G026",
+      "scope": "global",
+      "name_ko": "치첸이트사",
+      "name_en": "Chichen Itza",
+      "country": "멕시코",
+      "region": "유카탄",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "ancient",
+        "sunlit",
+        "mystic"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Chichen Itza, El Castillo pyramid, Yucatan, Mayan ruins, clear blue sky, late afternoon sunlight, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10026,
+      "filename": "치첸이트사_계단피라미드_엄숙.png"
+    },
+    {
+      "id": "G027",
+      "scope": "global",
+      "name_ko": "올드 아바나",
+      "name_en": "Old Havana",
+      "country": "쿠바",
+      "region": "아바나",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "vintage",
+        "colorful",
+        "analog"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Old Havana, Cuba, colorful colonial buildings, vintage classic cars, warm afternoon light, street photography, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10027,
+      "filename": "올드아바나_클래식카골목_레트로.png"
+    },
+    {
+      "id": "G028",
+      "scope": "global",
+      "name_ko": "콜로세움",
+      "name_en": "Colosseum",
+      "country": "이탈리아",
+      "region": "로마",
+      "category": "heritage",
+      "mood": "warm",
+      "tags": [
+        "ancient",
+        "golden",
+        "grand"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Colosseum, Rome, ancient amphitheater, golden hour, warm stone texture, wide angle architectural photography, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10028,
+      "filename": "콜로세움_석양아치_웅장.png"
+    },
+    {
+      "id": "G029",
+      "scope": "global",
+      "name_ko": "트레비 분수",
+      "name_en": "Trevi Fountain",
+      "country": "이탈리아",
+      "region": "로마",
+      "category": "landmark",
+      "mood": "retro",
+      "tags": [
+        "baroque",
+        "romantic",
+        "classic"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -2,
+        1,
+        -1
+      ],
+      "prompt": "Trevi Fountain, Rome, baroque marble sculptures, turquoise water, night illumination, warm lamp light, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10029,
+      "filename": "트레비분수_바로크조각_우아.png"
+    },
+    {
+      "id": "G030",
+      "scope": "global",
+      "name_ko": "베네치아 대운하",
+      "name_en": "Grand Canal, Venice",
+      "country": "이탈리아",
+      "region": "베네치아",
+      "category": "city",
+      "mood": "dreamy",
+      "tags": [
+        "romantic",
+        "watery",
+        "soft"
+      ],
+      "axes": [
+        0,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "prompt": "Grand Canal, Venice, gondolas, Rialto Bridge, pastel palaces, misty morning, soft light, water reflections, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10030,
+      "filename": "베네치아대운하_곤돌라운하_낭만.png"
+    },
+    {
+      "id": "G031",
+      "scope": "global",
+      "name_ko": "마나롤라",
+      "name_en": "Manarola, Cinque Terre",
+      "country": "이탈리아",
+      "region": "친퀘테레",
+      "category": "coast",
+      "mood": "warm",
+      "tags": [
+        "colorful",
+        "seaside",
+        "cheerful"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Manarola, Cinque Terre, colorful cliffside houses, Ligurian sea, sunset, small harbor, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10031,
+      "filename": "마나롤라_알록달록절벽마을_경쾌.png"
+    },
+    {
+      "id": "G032",
+      "scope": "global",
+      "name_ko": "포지타노",
+      "name_en": "Positano",
+      "country": "이탈리아",
+      "region": "아말피 해안",
+      "category": "coast",
+      "mood": "warm",
+      "tags": [
+        "summer",
+        "bright",
+        "holiday"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Positano, Amalfi Coast, pastel houses on cliffs, Mediterranean sea, beach umbrellas, summer sunlight, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10032,
+      "filename": "포지타노_해변파라솔_여유.png"
+    },
+    {
+      "id": "G033",
+      "scope": "global",
+      "name_ko": "피렌체 두오모",
+      "name_en": "Florence Cathedral",
+      "country": "이탈리아",
+      "region": "피렌체",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "classic",
+        "artistic",
+        "golden"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Florence Cathedral, Brunelleschi dome, terracotta rooftops, Tuscany, golden hour, view from Piazzale Michelangelo, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10033,
+      "filename": "피렌체두오모_붉은지붕도시_고전.png"
+    },
+    {
+      "id": "G034",
+      "scope": "global",
+      "name_ko": "발도르차",
+      "name_en": "Val d'Orcia",
+      "country": "이탈리아",
+      "region": "토스카나",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "pastoral",
+        "slow",
+        "gentle"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Val d'Orcia, Tuscany, rolling green hills, cypress tree lined road, farmhouse, morning fog, golden sunrise, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10034,
+      "filename": "발도르차_사이프러스길_목가.png"
+    },
+    {
+      "id": "G035",
+      "scope": "global",
+      "name_ko": "세체다",
+      "name_en": "Seceda, Dolomites",
+      "country": "이탈리아",
+      "region": "돌로미티",
+      "category": "mountain",
+      "mood": "nature",
+      "tags": [
+        "alpine",
+        "dramatic",
+        "fresh"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -2,
+        1
+      ],
+      "prompt": "Seceda ridge, Dolomites, jagged peaks, green alpine meadows, dramatic clouds, sunrise, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10035,
+      "filename": "세체다_초록능선봉우리_장엄.png"
+    },
+    {
+      "id": "G036",
+      "scope": "global",
+      "name_ko": "사그라다 파밀리아",
+      "name_en": "Sagrada Familia",
+      "country": "스페인",
+      "region": "바르셀로나",
+      "category": "landmark",
+      "mood": "passion",
+      "tags": [
+        "artistic",
+        "bold",
+        "intricate"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        0,
+        2,
+        2
+      ],
+      "prompt": "Sagrada Familia, Barcelona, Gaudi basilica, intricate facade, warm afternoon light, low angle view, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10036,
+      "filename": "사그라다파밀리아_황금빛첨탑_경이.png"
+    },
+    {
+      "id": "G037",
+      "scope": "global",
+      "name_ko": "알함브라 궁전",
+      "name_en": "Alhambra",
+      "country": "스페인",
+      "region": "그라나다",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "moorish",
+        "sunset",
+        "timeless"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Alhambra palace, Granada, Sierra Nevada snowy mountains, sunset, warm red walls, view from Mirador de San Nicolas, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10037,
+      "filename": "알함브라궁전_석양요새_고풍.png"
+    },
+    {
+      "id": "G038",
+      "scope": "global",
+      "name_ko": "스페인 광장",
+      "name_en": "Plaza de Espana, Seville",
+      "country": "스페인",
+      "region": "세비야",
+      "category": "landmark",
+      "mood": "passion",
+      "tags": [
+        "passionate",
+        "ornate",
+        "sunny"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        0,
+        2,
+        2
+      ],
+      "prompt": "Plaza de Espana, Seville, ornate brick building, canal, azulejo tiles, golden hour, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10038,
+      "filename": "스페인광장_아치회랑반영_화사.png"
+    },
+    {
+      "id": "G039",
+      "scope": "global",
+      "name_ko": "알파마 지구",
+      "name_en": "Alfama, Lisbon",
+      "country": "포르투갈",
+      "region": "리스본",
+      "category": "city",
+      "mood": "warm",
+      "tags": [
+        "sunny",
+        "hilly",
+        "nostalgic"
+      ],
+      "axes": [
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        2,
+        0
+      ],
+      "prompt": "Alfama district, Lisbon, yellow tram 28, steep cobblestone street, pastel buildings, warm afternoon light, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10039,
+      "filename": "알파마지구_노란트램_정겨움.png"
+    },
+    {
+      "id": "G040",
+      "scope": "global",
+      "name_ko": "히베이라",
+      "name_en": "Ribeira, Porto",
+      "country": "포르투갈",
+      "region": "포르투",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "riverside",
+        "colorful",
+        "analog"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Ribeira, Porto, Douro River, Dom Luis I Bridge, colorful riverside houses, sunset, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10040,
+      "filename": "히베이라_강변파스텔집_여유.png"
+    },
+    {
+      "id": "G041",
+      "scope": "global",
+      "name_ko": "빅벤과 웨스트민스터",
+      "name_en": "Big Ben and Westminster",
+      "country": "영국",
+      "region": "런던",
+      "category": "landmark",
+      "mood": "cool",
+      "tags": [
+        "classic",
+        "urban",
+        "blue hour"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "prompt": "Big Ben, Houses of Parliament, Westminster Bridge, London, blue hour, Thames river, light trails, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10041,
+      "filename": "빅벤과웨스트민스터_블루아워빛궤적_도회적.png"
+    },
+    {
+      "id": "G042",
+      "scope": "global",
+      "name_ko": "스톤헨지",
+      "name_en": "Stonehenge",
+      "country": "영국",
+      "region": "솔즈베리",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "ancient",
+        "mystic",
+        "foggy"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Stonehenge, Salisbury Plain, ancient standing stones, foggy sunrise, moody sky, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10042,
+      "filename": "스톤헨지_안개거석_신비.png"
+    },
+    {
+      "id": "G043",
+      "scope": "global",
+      "name_ko": "올드 맨 오브 스토르",
+      "name_en": "Old Man of Storr",
+      "country": "영국",
+      "region": "스카이섬",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "moody",
+        "highland",
+        "solitary"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Old Man of Storr, Isle of Skye, Scotland, rocky pinnacles, misty highlands, moody overcast light, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10043,
+      "filename": "올드맨오브스토르_바위첨탑_고독.png"
+    },
+    {
+      "id": "G044",
+      "scope": "global",
+      "name_ko": "바이버리",
+      "name_en": "Bibury, Cotswolds",
+      "country": "영국",
+      "region": "코츠월드",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "cottage",
+        "quiet",
+        "storybook"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Bibury, Cotswolds, Arlington Row, honey stone cottages, small river, spring morning, soft light, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10044,
+      "filename": "바이버리_돌집개울_동화.png"
+    },
+    {
+      "id": "G045",
+      "scope": "global",
+      "name_ko": "모허 절벽",
+      "name_en": "Cliffs of Moher",
+      "country": "아일랜드",
+      "region": "클레어",
+      "category": "coast",
+      "mood": "nature",
+      "tags": [
+        "wild",
+        "windy",
+        "dramatic"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Cliffs of Moher, Ireland, sheer sea cliffs, Atlantic ocean waves, green grass, dramatic sunset, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10045,
+      "filename": "모허절벽_석양절벽_거친.png"
+    },
+    {
+      "id": "G046",
+      "scope": "global",
+      "name_ko": "노이슈반슈타인 성",
+      "name_en": "Neuschwanstein Castle",
+      "country": "독일",
+      "region": "바이에른",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "fairytale",
+        "romantic",
+        "misty"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Neuschwanstein Castle, Bavaria, fairytale castle, autumn forest, Alps, morning mist, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10046,
+      "filename": "노이슈반슈타인성_안개속성_동화.png"
+    },
+    {
+      "id": "G047",
+      "scope": "global",
+      "name_ko": "할슈타트",
+      "name_en": "Hallstatt",
+      "country": "오스트리아",
+      "region": "잘츠카머구트",
+      "category": "city",
+      "mood": "cool",
+      "tags": [
+        "snowy",
+        "quiet",
+        "storybook"
+      ],
+      "axes": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "prompt": "Hallstatt, Austria, lakeside village, church spire, alpine lake, snowy winter, calm reflection, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10047,
+      "filename": "할슈타트_눈덮인호숫가_고요.png"
+    },
+    {
+      "id": "G048",
+      "scope": "global",
+      "name_ko": "마터호른",
+      "name_en": "Matterhorn",
+      "country": "스위스",
+      "region": "체르마트",
+      "category": "mountain",
+      "mood": "cool",
+      "tags": [
+        "majestic",
+        "pure",
+        "alpine"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -2,
+        2
+      ],
+      "prompt": "Matterhorn, Zermatt, Switzerland, snow pyramid peak, Riffelsee lake reflection, alpenglow sunrise, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10048,
+      "filename": "마터호른_설산반영_청명.png"
+    },
+    {
+      "id": "G049",
+      "scope": "global",
+      "name_ko": "라우터브루넨",
+      "name_en": "Lauterbrunnen Valley",
+      "country": "스위스",
+      "region": "베른주",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "peaceful",
+        "green",
+        "alpine"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Lauterbrunnen Valley, Switzerland, Staubbach waterfall, green meadows, alpine cliffs, summer, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10049,
+      "filename": "라우터브루넨_초원폭포_평화.png"
+    },
+    {
+      "id": "G050",
+      "scope": "global",
+      "name_ko": "카를교",
+      "name_en": "Charles Bridge",
+      "country": "체코",
+      "region": "프라하",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "gothic",
+        "misty",
+        "romantic"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Charles Bridge, Prague, gothic statues, Prague Castle, misty dawn, cobblestone, soft light, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10050,
+      "filename": "카를교_새벽돌다리_적막.png"
+    },
+    {
+      "id": "G051",
+      "scope": "global",
+      "name_ko": "헝가리 국회의사당",
+      "name_en": "Hungarian Parliament Building",
+      "country": "헝가리",
+      "region": "부다페스트",
+      "category": "landmark",
+      "mood": "night",
+      "tags": [
+        "golden lights",
+        "elegant",
+        "riverside"
+      ],
+      "axes": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "prompt": "Hungarian Parliament Building, Budapest, Danube river, night illumination, golden light reflections, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10051,
+      "filename": "헝가리국회의사당_황금조명야경_화려.png"
+    },
+    {
+      "id": "G052",
+      "scope": "global",
+      "name_ko": "암스테르담 운하",
+      "name_en": "Amsterdam Canals",
+      "country": "네덜란드",
+      "region": "암스테르담",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "cozy",
+        "bicycles",
+        "nostalgic"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Amsterdam canal, gabled canal houses, bicycles on bridge, autumn, soft afternoon light, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10052,
+      "filename": "암스테르담운하_자전거운하_아늑.png"
+    },
+    {
+      "id": "G053",
+      "scope": "global",
+      "name_ko": "리세 튤립 꽃밭",
+      "name_en": "Tulip Fields, Lisse",
+      "country": "네덜란드",
+      "region": "리세",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "colorful",
+        "spring",
+        "cheerful"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "tulip fields, Lisse, Netherlands, colorful rows of tulips, windmill, spring morning, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10053,
+      "filename": "리세튤립꽃밭_풍차튤립_화사.png"
+    },
+    {
+      "id": "G054",
+      "scope": "global",
+      "name_ko": "몽마르트르",
+      "name_en": "Montmartre",
+      "country": "프랑스",
+      "region": "파리",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "artistic",
+        "bohemian",
+        "morning"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Montmartre, Paris, Sacre-Coeur Basilica, cobblestone street, small cafe, morning light, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10054,
+      "filename": "몽마르트르_카페골목_보헤미안.png"
+    },
+    {
+      "id": "G055",
+      "scope": "global",
+      "name_ko": "몽생미셸",
+      "name_en": "Mont Saint-Michel",
+      "country": "프랑스",
+      "region": "노르망디",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "mystic",
+        "tidal",
+        "pastel"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Mont Saint-Michel, Normandy, tidal island abbey, reflection at low tide, twilight, pastel sky, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10055,
+      "filename": "몽생미셸_보랏빛반영_몽환.png"
+    },
+    {
+      "id": "G056",
+      "scope": "global",
+      "name_ko": "발랑솔 라벤더 밭",
+      "name_en": "Valensole Lavender Fields",
+      "country": "프랑스",
+      "region": "프로방스",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "purple",
+        "fragrant",
+        "soft"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "lavender fields, Valensole, Provence, purple rows, lone tree, sunset, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10056,
+      "filename": "발랑솔라벤더밭_라벤더나무_향긋.png"
+    },
+    {
+      "id": "G057",
+      "scope": "global",
+      "name_ko": "니스 영국인 산책로",
+      "name_en": "Promenade des Anglais",
+      "country": "프랑스",
+      "region": "니스",
+      "category": "coast",
+      "mood": "warm",
+      "tags": [
+        "riviera",
+        "summer",
+        "bright"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Promenade des Anglais, Nice, French Riviera, turquoise sea, pebble beach, summer sunlight, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10057,
+      "filename": "니스영국인산책로_자갈해변_상쾌.png"
+    },
+    {
+      "id": "G058",
+      "scope": "global",
+      "name_ko": "레이네",
+      "name_en": "Reine, Lofoten",
+      "country": "노르웨이",
+      "region": "로포텐 제도",
+      "category": "coast",
+      "mood": "cool",
+      "tags": [
+        "arctic",
+        "rugged",
+        "quiet"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Reine, Lofoten Islands, Norway, red fishing cabins, rugged mountains, fjord, winter, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10058,
+      "filename": "레이네_빨간오두막_고요.png"
+    },
+    {
+      "id": "G059",
+      "scope": "global",
+      "name_ko": "트롤퉁가",
+      "name_en": "Trolltunga",
+      "country": "노르웨이",
+      "region": "오다",
+      "category": "mountain",
+      "mood": "nature",
+      "tags": [
+        "adventurous",
+        "vast",
+        "dramatic"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -2,
+        1
+      ],
+      "prompt": "Trolltunga, Norway, rock ledge over lake Ringedalsvatnet, fjord landscape, dramatic clouds, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10059,
+      "filename": "트롤퉁가_절벽바위혀_아찔.png"
+    },
+    {
+      "id": "G060",
+      "scope": "global",
+      "name_ko": "요쿨살론 빙하 호수",
+      "name_en": "Jokulsarlon Glacier Lagoon",
+      "country": "아이슬란드",
+      "region": "바트나요쿠틀",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "icy",
+        "pure",
+        "otherworldly"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Jokulsarlon glacier lagoon, Iceland, floating icebergs, Diamond Beach, black sand, ice chunks, soft blue light, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10060,
+      "filename": "요쿨살론빙하호수_검은모래빙하_초현실.png"
+    },
+    {
+      "id": "G061",
+      "scope": "global",
+      "name_ko": "파르테논 신전",
+      "name_en": "Parthenon",
+      "country": "그리스",
+      "region": "아테네",
+      "category": "heritage",
+      "mood": "warm",
+      "tags": [
+        "ancient",
+        "golden",
+        "classic"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Parthenon, Acropolis, Athens, ancient Greek temple, marble columns, golden hour, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10061,
+      "filename": "파르테논신전_황금빛기둥_고전.png"
+    },
+    {
+      "id": "G062",
+      "scope": "global",
+      "name_ko": "메테오라",
+      "name_en": "Meteora",
+      "country": "그리스",
+      "region": "테살리아",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "mystic",
+        "floating",
+        "quiet"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Meteora, Greece, monasteries on rock pillars, morning fog, sunrise, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10062,
+      "filename": "메테오라_바위위수도원_경건.png"
+    },
+    {
+      "id": "G063",
+      "scope": "global",
+      "name_ko": "두브로브니크 구시가",
+      "name_en": "Dubrovnik Old Town",
+      "country": "크로아티아",
+      "region": "두브로브니크",
+      "category": "city",
+      "mood": "warm",
+      "tags": [
+        "seaside",
+        "terracotta",
+        "sunset"
+      ],
+      "axes": [
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        2,
+        0
+      ],
+      "prompt": "Dubrovnik old town, Croatia, city walls, terracotta roofs, Adriatic sea, sunset, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10063,
+      "filename": "두브로브니크구시가_성벽해안_따스함.png"
+    },
+    {
+      "id": "G064",
+      "scope": "global",
+      "name_ko": "플리트비체 호수",
+      "name_en": "Plitvice Lakes",
+      "country": "크로아티아",
+      "region": "리카-센",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "turquoise",
+        "fresh",
+        "lush"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Plitvice Lakes, Croatia, turquoise cascading lakes, waterfalls, wooden boardwalk, lush forest, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10064,
+      "filename": "플리트비체호수_에메랄드호수데크_청량.png"
+    },
+    {
+      "id": "G065",
+      "scope": "global",
+      "name_ko": "카파도키아",
+      "name_en": "Cappadocia",
+      "country": "튀르키예",
+      "region": "괴레메",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "balloons",
+        "pastel",
+        "magical"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Cappadocia, Turkey, hot air balloons, fairy chimneys, sunrise, pastel sky, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10065,
+      "filename": "카파도키아_열기구일출_몽환.png"
+    },
+    {
+      "id": "G066",
+      "scope": "global",
+      "name_ko": "블루 모스크",
+      "name_en": "Blue Mosque",
+      "country": "튀르키예",
+      "region": "이스탄불",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "exotic",
+        "sunset",
+        "timeless"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Blue Mosque, Istanbul, Sultan Ahmed Mosque, minarets, sunset, seagulls, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10066,
+      "filename": "블루모스크_첨탑과갈매기_이국적.png"
+    },
+    {
+      "id": "G067",
+      "scope": "global",
+      "name_ko": "파묵칼레",
+      "name_en": "Pamukkale",
+      "country": "튀르키예",
+      "region": "데니즐리",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "white",
+        "surreal",
+        "soft"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Pamukkale, Turkey, white travertine terraces, turquoise thermal pools, sunset, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10067,
+      "filename": "파묵칼레_하얀석회층_초현실.png"
+    },
+    {
+      "id": "G068",
+      "scope": "global",
+      "name_ko": "페트라",
+      "name_en": "Petra",
+      "country": "요르단",
+      "region": "마안",
+      "category": "heritage",
+      "mood": "passion",
+      "tags": [
+        "rose red",
+        "ancient",
+        "mysterious"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        1,
+        2
+      ],
+      "prompt": "Petra, Jordan, Al-Khazneh Treasury, rose red sandstone, Siq canyon walls, warm light, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10068,
+      "filename": "페트라_붉은암벽신전_신비.png"
+    },
+    {
+      "id": "G069",
+      "scope": "global",
+      "name_ko": "기자 피라미드",
+      "name_en": "Pyramids of Giza",
+      "country": "이집트",
+      "region": "기자",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "ancient",
+        "desert",
+        "golden"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Pyramids of Giza, Egypt, Great Sphinx, desert sand, golden sunset, camels, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10069,
+      "filename": "기자피라미드_낙타행렬_장엄.png"
+    },
+    {
+      "id": "G070",
+      "scope": "global",
+      "name_ko": "메르주가 사하라 사막",
+      "name_en": "Sahara Desert, Merzouga",
+      "country": "모로코",
+      "region": "메르주가",
+      "category": "desert",
+      "mood": "passion",
+      "tags": [
+        "dunes",
+        "vast",
+        "fiery"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        2,
+        1,
+        2
+      ],
+      "prompt": "Sahara Desert, Merzouga, orange sand dunes, camel caravan, sunset, long shadows, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10070,
+      "filename": "메르주가사하라사막_주황빛사구_열정.png"
+    },
+    {
+      "id": "G071",
+      "scope": "global",
+      "name_ko": "셰프샤우엔",
+      "name_en": "Chefchaouen",
+      "country": "모로코",
+      "region": "셰프샤우엔",
+      "category": "city",
+      "mood": "cool",
+      "tags": [
+        "blue",
+        "calm",
+        "dreamy"
+      ],
+      "axes": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "prompt": "Chefchaouen, Morocco, blue painted alley, stairs, potted plants, soft daylight, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10071,
+      "filename": "셰프샤우엔_파란계단_차분.png"
+    },
+    {
+      "id": "G072",
+      "scope": "global",
+      "name_ko": "제마 엘프나 광장",
+      "name_en": "Jemaa el-Fnaa",
+      "country": "모로코",
+      "region": "마라케시",
+      "category": "city",
+      "mood": "passion",
+      "tags": [
+        "lively",
+        "spicy",
+        "lanterns"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        2,
+        2
+      ],
+      "prompt": "Jemaa el-Fnaa, Marrakech, market square, food stall smoke, dusk, warm lanterns, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10072,
+      "filename": "제마엘프나광장_노점연기_활기.png"
+    },
+    {
+      "id": "G073",
+      "scope": "global",
+      "name_ko": "부르즈 할리파",
+      "name_en": "Burj Khalifa",
+      "country": "아랍에미리트",
+      "region": "두바이",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "futuristic",
+        "glamorous",
+        "modern"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Burj Khalifa, Dubai, supertall skyscraper, downtown skyline, blue hour, city lights, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10073,
+      "filename": "부르즈할리파_마천루야경_화려.png"
+    },
+    {
+      "id": "G074",
+      "scope": "global",
+      "name_ko": "빅토리아 폭포",
+      "name_en": "Victoria Falls",
+      "country": "짐바브웨·잠비아",
+      "region": "리빙스턴",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "powerful",
+        "misty",
+        "wild"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Victoria Falls, Zambezi River, massive waterfall, mist, rainbow, aerial view, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10074,
+      "filename": "빅토리아폭포_무지개협곡_역동.png"
+    },
+    {
+      "id": "G075",
+      "scope": "global",
+      "name_ko": "세렝게티 국립공원",
+      "name_en": "Serengeti National Park",
+      "country": "탄자니아",
+      "region": "세렝게티",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "savanna",
+        "wild",
+        "golden"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Serengeti, Tanzania, acacia tree, savanna, wildebeest herd, golden sunset, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10075,
+      "filename": "세렝게티국립공원_아카시아누떼_야생.png"
+    },
+    {
+      "id": "G076",
+      "scope": "global",
+      "name_ko": "테이블 마운틴",
+      "name_en": "Table Mountain",
+      "country": "남아프리카공화국",
+      "region": "케이프타운",
+      "category": "mountain",
+      "mood": "nature",
+      "tags": [
+        "coastal",
+        "open",
+        "fresh"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -2,
+        1
+      ],
+      "prompt": "Table Mountain, Cape Town, flat top mountain, city and ocean, cloud tablecloth, afternoon light, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10076,
+      "filename": "테이블마운틴_평정산해안_상쾌.png"
+    },
+    {
+      "id": "G077",
+      "scope": "global",
+      "name_ko": "타지마할",
+      "name_en": "Taj Mahal",
+      "country": "인도",
+      "region": "아그라",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "romantic",
+        "pure",
+        "serene"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Taj Mahal, Agra, white marble mausoleum, reflecting pool, sunrise, soft pink haze, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10077,
+      "filename": "타지마할_수로반영_우아.png"
+    },
+    {
+      "id": "G078",
+      "scope": "global",
+      "name_ko": "바라나시 가트",
+      "name_en": "Varanasi Ghats",
+      "country": "인도",
+      "region": "바라나시",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "spiritual",
+        "misty",
+        "analog"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Varanasi ghats, Ganges River, wooden boats, candles, dawn, mist, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10078,
+      "filename": "바라나시가트_촛불나룻배_영적.png"
+    },
+    {
+      "id": "G079",
+      "scope": "global",
+      "name_ko": "몰디브 라군",
+      "name_en": "Maldives Lagoon",
+      "country": "몰디브",
+      "region": "말레 환초",
+      "category": "island",
+      "mood": "cool",
+      "tags": [
+        "tropical",
+        "clear",
+        "relaxing"
+      ],
+      "axes": [
+        -2,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "overwater villas, Maldives, turquoise lagoon, white sand, aerial view, tropical sunlight, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10079,
+      "filename": "몰디브라군_수상방갈로_휴양.png"
+    },
+    {
+      "id": "G080",
+      "scope": "global",
+      "name_ko": "앙코르와트",
+      "name_en": "Angkor Wat",
+      "country": "캄보디아",
+      "region": "시엠레아프",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "ancient",
+        "sunrise",
+        "spiritual"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Angkor Wat, Siem Reap, temple silhouette, lotus pond reflection, sunrise, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10080,
+      "filename": "앙코르와트_연못반영_경건.png"
+    },
+    {
+      "id": "G081",
+      "scope": "global",
+      "name_ko": "하롱베이",
+      "name_en": "Ha Long Bay",
+      "country": "베트남",
+      "region": "꽝닌",
+      "category": "coast",
+      "mood": "dreamy",
+      "tags": [
+        "misty",
+        "emerald",
+        "quiet"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Ha Long Bay, Vietnam, limestone karsts, emerald water, traditional junk boat, misty morning, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10081,
+      "filename": "하롱베이_석회암섬정크선_몽환.png"
+    },
+    {
+      "id": "G082",
+      "scope": "global",
+      "name_ko": "호이안 구시가",
+      "name_en": "Hoi An Ancient Town",
+      "country": "베트남",
+      "region": "호이안",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "lanterns",
+        "nostalgic",
+        "warm glow"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Hoi An ancient town, Vietnam, colorful silk lanterns, Thu Bon river, night, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10082,
+      "filename": "호이안구시가_등불강변_따스함.png"
+    },
+    {
+      "id": "G083",
+      "scope": "global",
+      "name_ko": "뜨갈랄랑 계단식 논",
+      "name_en": "Tegallalang Rice Terraces",
+      "country": "인도네시아",
+      "region": "발리 우붓",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "lush",
+        "tropical",
+        "slow"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Tegallalang rice terraces, Ubud, Bali, lush green rice paddies, palm trees, morning light, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10083,
+      "filename": "뜨갈랄랑계단식논_야자수계단논_싱그러움.png"
+    },
+    {
+      "id": "G084",
+      "scope": "global",
+      "name_ko": "렘푸양 사원",
+      "name_en": "Lempuyang Temple",
+      "country": "인도네시아",
+      "region": "발리",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "spiritual",
+        "misty",
+        "framed"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Lempuyang Temple, Gates of Heaven, Bali, Mount Agung, sunrise, mist, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10084,
+      "filename": "렘푸양사원_천국의문화산_경건.png"
+    },
+    {
+      "id": "G085",
+      "scope": "global",
+      "name_ko": "가든스 바이 더 베이",
+      "name_en": "Gardens by the Bay",
+      "country": "싱가포르",
+      "region": "싱가포르",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "futuristic",
+        "glowing",
+        "vivid"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Marina Bay Sands, Gardens by the Bay, Supertree Grove, Singapore, night illumination, futuristic, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10085,
+      "filename": "가든스바이더베이_슈퍼트리야경_미래적.png"
+    },
+    {
+      "id": "G086",
+      "scope": "global",
+      "name_ko": "왓 아룬",
+      "name_en": "Wat Arun",
+      "country": "태국",
+      "region": "방콕",
+      "category": "heritage",
+      "mood": "warm",
+      "tags": [
+        "riverside",
+        "golden",
+        "exotic"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Wat Arun, Bangkok, temple of dawn, Chao Phraya River, sunset, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10086,
+      "filename": "왓아룬_강변사원노을_따스함.png"
+    },
+    {
+      "id": "G087",
+      "scope": "global",
+      "name_ko": "이펭 축제",
+      "name_en": "Yi Peng Lantern Festival",
+      "country": "태국",
+      "region": "치앙마이",
+      "category": "festival",
+      "mood": "night",
+      "tags": [
+        "lanterns",
+        "magical",
+        "together"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Yi Peng festival, Chiang Mai, floating sky lanterns, night sky, warm glow, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10087,
+      "filename": "이펭축제_풍등_낭만.png"
+    },
+    {
+      "id": "G088",
+      "scope": "global",
+      "name_ko": "장가계",
+      "name_en": "Zhangjiajie",
+      "country": "중국",
+      "region": "후난성",
+      "category": "mountain",
+      "mood": "dreamy",
+      "tags": [
+        "surreal",
+        "clouds",
+        "mystic"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -2,
+        1
+      ],
+      "prompt": "Zhangjiajie National Forest Park, sandstone pillars, sea of clouds, green forest, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10088,
+      "filename": "장가계_운해석봉_신비.png"
+    },
+    {
+      "id": "G089",
+      "scope": "global",
+      "name_ko": "만리장성 무톈위",
+      "name_en": "Great Wall at Mutianyu",
+      "country": "중국",
+      "region": "베이징",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "epic",
+        "autumn",
+        "ancient"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Great Wall of China, Mutianyu, autumn foliage, mountains, morning light, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10089,
+      "filename": "만리장성무톈위_산능선성벽_웅장.png"
+    },
+    {
+      "id": "G090",
+      "scope": "global",
+      "name_ko": "리강",
+      "name_en": "Li River, Guilin",
+      "country": "중국",
+      "region": "구이린",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "misty",
+        "poetic",
+        "slow"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Li River, Guilin, karst mountains, bamboo raft, fisherman, misty sunrise, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10090,
+      "filename": "리강_안개뱃사공_서정.png"
+    },
+    {
+      "id": "G091",
+      "scope": "global",
+      "name_ko": "와이탄",
+      "name_en": "The Bund",
+      "country": "중국",
+      "region": "상하이",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "skyline",
+        "glamorous",
+        "modern"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "The Bund, Shanghai, Pudong skyline, Oriental Pearl Tower, Huangpu River, night, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10091,
+      "filename": "와이탄_스카이라인야경_화려.png"
+    },
+    {
+      "id": "G092",
+      "scope": "global",
+      "name_ko": "빅토리아 하버",
+      "name_en": "Victoria Harbour",
+      "country": "중국",
+      "region": "홍콩",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "neon",
+        "dense",
+        "cinematic"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Victoria Harbour, Hong Kong, view from Victoria Peak, skyscrapers, night city lights, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10092,
+      "filename": "빅토리아하버_항구야경_도회적.png"
+    },
+    {
+      "id": "G093",
+      "scope": "global",
+      "name_ko": "지우펀 옛거리",
+      "name_en": "Jiufen Old Street",
+      "country": "대만",
+      "region": "신베이",
+      "category": "city",
+      "mood": "retro",
+      "tags": [
+        "lanterns",
+        "rainy",
+        "nostalgic"
+      ],
+      "axes": [
+        0,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "prompt": "Jiufen old street, Taiwan, red lanterns, teahouses, hillside, evening rain, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10093,
+      "filename": "지우펀옛거리_붉은등불_레트로.png"
+    },
+    {
+      "id": "G094",
+      "scope": "global",
+      "name_ko": "시드니 오페라하우스",
+      "name_en": "Sydney Opera House",
+      "country": "호주",
+      "region": "시드니",
+      "category": "landmark",
+      "mood": "warm",
+      "tags": [
+        "harbor",
+        "iconic",
+        "sunset"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -2,
+        2,
+        0
+      ],
+      "prompt": "Sydney Opera House, Harbour Bridge, Sydney, sunset, harbor, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10094,
+      "filename": "시드니오페라하우스_항구노을_여유.png"
+    },
+    {
+      "id": "G095",
+      "scope": "global",
+      "name_ko": "화이트헤븐 비치",
+      "name_en": "Whitehaven Beach",
+      "country": "호주",
+      "region": "휘트선데이 제도",
+      "category": "coast",
+      "mood": "cool",
+      "tags": [
+        "swirling",
+        "clear",
+        "pure"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Whitehaven Beach, Whitsunday Islands, swirling white sand, turquoise water, aerial view, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10095,
+      "filename": "화이트헤븐비치_흰모래물결_청량.png"
+    },
+    {
+      "id": "G096",
+      "scope": "global",
+      "name_ko": "울루루",
+      "name_en": "Uluru",
+      "country": "호주",
+      "region": "노던 준주",
+      "category": "desert",
+      "mood": "passion",
+      "tags": [
+        "red earth",
+        "sacred",
+        "vast"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        2,
+        1,
+        2
+      ],
+      "prompt": "Uluru, Northern Territory, red sandstone monolith, outback, sunset, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10096,
+      "filename": "울루루_붉은바위_강렬.png"
+    },
+    {
+      "id": "G097",
+      "scope": "global",
+      "name_ko": "밀퍼드 사운드",
+      "name_en": "Milford Sound",
+      "country": "뉴질랜드",
+      "region": "피오르드랜드",
+      "category": "nature",
+      "mood": "cool",
+      "tags": [
+        "fjord",
+        "misty",
+        "grand"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Milford Sound, Fiordland, Mitre Peak, waterfalls, fjord, misty morning, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10097,
+      "filename": "밀퍼드사운드_피오르폭포_장엄.png"
+    },
+    {
+      "id": "G098",
+      "scope": "global",
+      "name_ko": "테카포 호수",
+      "name_en": "Lake Tekapo",
+      "country": "뉴질랜드",
+      "region": "캔터베리",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "starry",
+        "quiet",
+        "magical"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Lake Tekapo, Church of the Good Shepherd, Milky Way, lupin flowers, starry night, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10098,
+      "filename": "테카포호수_은하수교회_몽환.png"
+    },
+    {
+      "id": "G099",
+      "scope": "global",
+      "name_ko": "보라보라",
+      "name_en": "Bora Bora",
+      "country": "프랑스령 폴리네시아",
+      "region": "보라보라",
+      "category": "island",
+      "mood": "cool",
+      "tags": [
+        "tropical",
+        "clear",
+        "luxurious"
+      ],
+      "axes": [
+        -2,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Bora Bora, French Polynesia, Mount Otemanu, turquoise lagoon, overwater bungalows, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10099,
+      "filename": "보라보라_수상방갈로산_휴양.png"
+    },
+    {
+      "id": "G100",
+      "scope": "global",
+      "name_ko": "블레드 호수",
+      "name_en": "Lake Bled",
+      "country": "슬로베니아",
+      "region": "블레드",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "storybook",
+        "calm",
+        "misty"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Lake Bled, Slovenia, island church, castle on cliff, morning mist, autumn, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10100,
+      "filename": "블레드호수_섬위교회_동화.png"
+    },
+    {
+      "id": "K001",
+      "scope": "korea",
+      "name_ko": "경복궁",
+      "name_en": "Gyeongbokgung Palace",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "traditional",
+        "grand",
+        "autumn"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Gyeongbokgung Palace, Seoul, Geunjeongjeon throne hall, traditional Korean architecture, Bugaksan mountain, autumn, clear blue sky, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10101,
+      "filename": "경복궁_단청전각_청명.png"
+    },
+    {
+      "id": "K002",
+      "scope": "korea",
+      "name_ko": "북촌 한옥마을",
+      "name_en": "Bukchon Hanok Village",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "hanok",
+        "quiet",
+        "nostalgic"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Bukchon Hanok Village, Seoul, traditional hanok rooftops, narrow alley, city skyline, early morning, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10102,
+      "filename": "북촌한옥마을_한옥골목_고즈넉.png"
+    },
+    {
+      "id": "K003",
+      "scope": "korea",
+      "name_ko": "N서울타워",
+      "name_en": "N Seoul Tower",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "landmark",
+      "mood": "night",
+      "tags": [
+        "city lights",
+        "romantic",
+        "urban"
+      ],
+      "axes": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "prompt": "N Seoul Tower, Namsan, Seoul skyline, blue hour, city lights, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10103,
+      "filename": "N서울타워_도심야경_낭만.png"
+    },
+    {
+      "id": "K004",
+      "scope": "korea",
+      "name_ko": "석촌호수와 롯데월드타워",
+      "name_en": "Seokchon Lake and Lotte World Tower",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "city",
+      "mood": "warm",
+      "tags": [
+        "cherry blossom",
+        "spring",
+        "cheerful"
+      ],
+      "axes": [
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        2,
+        0
+      ],
+      "prompt": "Lotte World Tower, Seokchon Lake, cherry blossoms, Seoul, spring, soft daylight, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10104,
+      "filename": "석촌호수와롯데월드타워_벚꽃호수_화사.png"
+    },
+    {
+      "id": "K005",
+      "scope": "korea",
+      "name_ko": "창덕궁 후원",
+      "name_en": "Huwon, Changdeokgung",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "heritage",
+      "mood": "nature",
+      "tags": [
+        "secret garden",
+        "calm",
+        "autumn"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Huwon Secret Garden, Changdeokgung, Buyongji pond, pavilion, autumn foliage, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10105,
+      "filename": "창덕궁후원_연못정자_고요.png"
+    },
+    {
+      "id": "K006",
+      "scope": "korea",
+      "name_ko": "동대문디자인플라자",
+      "name_en": "Dongdaemun Design Plaza",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "futuristic",
+        "curved",
+        "modern"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Dongdaemun Design Plaza, Seoul, futuristic curved architecture, LED lights, night, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10106,
+      "filename": "동대문디자인플라자_푸른곡선조명_미래적.png"
+    },
+    {
+      "id": "K007",
+      "scope": "korea",
+      "name_ko": "반포대교 달빛무지개분수",
+      "name_en": "Banpo Bridge Moonlight Rainbow Fountain",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "colorful",
+        "riverside",
+        "lively"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Banpo Bridge Moonlight Rainbow Fountain, Han River, Seoul, night, colorful water jets, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10107,
+      "filename": "반포대교달빛무지개분수_무지개분수_활기.png"
+    },
+    {
+      "id": "K008",
+      "scope": "korea",
+      "name_ko": "하늘공원 억새밭",
+      "name_en": "Haneul Park Silver Grass",
+      "country": "대한민국",
+      "region": "서울",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "autumn",
+        "golden",
+        "breezy"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Haneul Park, Seoul, silver grass fields, autumn sunset, golden light, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10108,
+      "filename": "하늘공원억새밭_황금억새석양_서정.png"
+    },
+    {
+      "id": "K009",
+      "scope": "korea",
+      "name_ko": "감천문화마을",
+      "name_en": "Gamcheon Culture Village",
+      "country": "대한민국",
+      "region": "부산",
+      "category": "city",
+      "mood": "warm",
+      "tags": [
+        "colorful",
+        "hillside",
+        "cheerful"
+      ],
+      "axes": [
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        2,
+        0
+      ],
+      "prompt": "Gamcheon Culture Village, Busan, colorful hillside houses, ocean view, sunny day, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10109,
+      "filename": "감천문화마을_알록달록언덕집_경쾌.png"
+    },
+    {
+      "id": "K010",
+      "scope": "korea",
+      "name_ko": "광안대교",
+      "name_en": "Gwangan Bridge",
+      "country": "대한민국",
+      "region": "부산",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "sea",
+        "lights",
+        "romantic"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Gwangan Bridge, Gwangalli Beach, Busan, night illumination, ocean reflection, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10110,
+      "filename": "광안대교_푸른다리야경_낭만.png"
+    },
+    {
+      "id": "K011",
+      "scope": "korea",
+      "name_ko": "해동용궁사",
+      "name_en": "Haedong Yonggungsa Temple",
+      "country": "대한민국",
+      "region": "부산",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "seaside",
+        "sunrise",
+        "spiritual"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Haedong Yonggungsa Temple, Busan, seaside temple on rocks, sunrise, waves, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10111,
+      "filename": "해동용궁사_바위해안사찰_경건.png"
+    },
+    {
+      "id": "K012",
+      "scope": "korea",
+      "name_ko": "흰여울문화마을",
+      "name_en": "Huinnyeoul Culture Village",
+      "country": "대한민국",
+      "region": "부산",
+      "category": "coast",
+      "mood": "cool",
+      "tags": [
+        "seaside",
+        "white walls",
+        "calm"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Huinnyeoul Culture Village, Yeongdo, Busan, seaside cliff village, white walls, ocean, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10112,
+      "filename": "흰여울문화마을_하얀담골목_차분.png"
+    },
+    {
+      "id": "K013",
+      "scope": "korea",
+      "name_ko": "불국사",
+      "name_en": "Bulguksa Temple",
+      "country": "대한민국",
+      "region": "경주",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "ancient",
+        "maple",
+        "calm"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Bulguksa Temple, Gyeongju, stone stairs bridges, autumn maple, morning, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10113,
+      "filename": "불국사_낙엽돌계단_고즈넉.png"
+    },
+    {
+      "id": "K014",
+      "scope": "korea",
+      "name_ko": "동궁과 월지",
+      "name_en": "Donggung Palace and Wolji Pond",
+      "country": "대한민국",
+      "region": "경주",
+      "category": "heritage",
+      "mood": "night",
+      "tags": [
+        "reflection",
+        "elegant",
+        "quiet"
+      ],
+      "axes": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prompt": "Donggung Palace and Wolji Pond, Gyeongju, night illumination, reflection, pavilions, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10114,
+      "filename": "동궁과월지_연못반영야경_우아.png"
+    },
+    {
+      "id": "K015",
+      "scope": "korea",
+      "name_ko": "첨성대 핑크뮬리",
+      "name_en": "Cheomseongdae and Pink Muhly",
+      "country": "대한민국",
+      "region": "경주",
+      "category": "heritage",
+      "mood": "warm",
+      "tags": [
+        "pink",
+        "autumn",
+        "soft"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Cheomseongdae Observatory, Gyeongju, ancient stone tower, pink muhly grass, sunset, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10115,
+      "filename": "첨성대핑크뮬리_분홍물결노을_로맨틱.png"
+    },
+    {
+      "id": "K016",
+      "scope": "korea",
+      "name_ko": "하회마을",
+      "name_en": "Hahoe Folk Village",
+      "country": "대한민국",
+      "region": "안동",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "traditional",
+        "riverside",
+        "misty"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Hahoe Folk Village, Andong, thatched roof houses, Nakdong River bend, view from Buyongdae cliff, morning mist, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10116,
+      "filename": "하회마을_안개강변마을_고요.png"
+    },
+    {
+      "id": "K017",
+      "scope": "korea",
+      "name_ko": "성산일출봉",
+      "name_en": "Seongsan Ilchulbong",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "volcanic",
+        "sunrise",
+        "spring"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Seongsan Ilchulbong, Jeju Island, volcanic tuff cone, yellow rapeseed flowers, sunrise, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10117,
+      "filename": "성산일출봉_유채꽃언덕_화사.png"
+    },
+    {
+      "id": "K018",
+      "scope": "korea",
+      "name_ko": "한라산 백록담",
+      "name_en": "Baengnokdam, Hallasan",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "mountain",
+      "mood": "cool",
+      "tags": [
+        "snowy",
+        "summit",
+        "pure"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -2,
+        2
+      ],
+      "prompt": "Hallasan, Baengnokdam crater lake, Jeju, snow covered, winter, clear sky, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10118,
+      "filename": "한라산백록담_설경화구호_청명.png"
+    },
+    {
+      "id": "K019",
+      "scope": "korea",
+      "name_ko": "협재해수욕장",
+      "name_en": "Hyeopjae Beach",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "coast",
+      "mood": "cool",
+      "tags": [
+        "emerald",
+        "summer",
+        "clear"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Hyeopjae Beach, Jeju, emerald water, white sand, Biyangdo island, summer, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10119,
+      "filename": "협재해수욕장_에메랄드해변_청량.png"
+    },
+    {
+      "id": "K020",
+      "scope": "korea",
+      "name_ko": "섭지코지",
+      "name_en": "Seopjikoji",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "coast",
+      "mood": "nature",
+      "tags": [
+        "coastal",
+        "lighthouse",
+        "breezy"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Seopjikoji, Jeju, coastal cliffs, lighthouse, rapeseed flowers, spring, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10120,
+      "filename": "섭지코지_등대유채꽃_상쾌.png"
+    },
+    {
+      "id": "K021",
+      "scope": "korea",
+      "name_ko": "사려니숲길",
+      "name_en": "Saryeoni Forest Path",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "forest",
+        "misty",
+        "slow"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Saryeoni Forest Path, Jeju, cedar trees, mist, morning light rays, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10121,
+      "filename": "사려니숲길_빛내린숲길_평온.png"
+    },
+    {
+      "id": "K022",
+      "scope": "korea",
+      "name_ko": "우도",
+      "name_en": "Udo Island",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "island",
+      "mood": "cool",
+      "tags": [
+        "turquoise",
+        "island",
+        "relaxing"
+      ],
+      "axes": [
+        -2,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Udo Island, Jeju, Seobin white sand beach, turquoise sea, sunny day, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10122,
+      "filename": "우도_투명한바다_휴양.png"
+    },
+    {
+      "id": "K023",
+      "scope": "korea",
+      "name_ko": "용머리해안",
+      "name_en": "Yongmeori Coast",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "coast",
+      "mood": "nature",
+      "tags": [
+        "layered rock",
+        "waves",
+        "wild"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Yongmeori Coast, Jeju, layered sandstone cliffs, crashing waves, late afternoon, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10123,
+      "filename": "용머리해안_층층암벽파도_거친.png"
+    },
+    {
+      "id": "K024",
+      "scope": "korea",
+      "name_ko": "김녕해수욕장",
+      "name_en": "Gimnyeong Beach",
+      "country": "대한민국",
+      "region": "제주",
+      "category": "coast",
+      "mood": "cool",
+      "tags": [
+        "clear",
+        "volcanic",
+        "breezy"
+      ],
+      "axes": [
+        -1,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Gimnyeong Beach, Jeju, turquoise shallow water, black volcanic rocks, wind turbines, bright daylight, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10124,
+      "filename": "김녕해수욕장_현무암풍차_상쾌.png"
+    },
+    {
+      "id": "K025",
+      "scope": "korea",
+      "name_ko": "설악산 울산바위",
+      "name_en": "Ulsanbawi, Seoraksan",
+      "country": "대한민국",
+      "region": "속초",
+      "category": "mountain",
+      "mood": "nature",
+      "tags": [
+        "granite",
+        "autumn",
+        "grand"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -2,
+        1
+      ],
+      "prompt": "Ulsanbawi Rock, Seoraksan National Park, granite peaks, autumn foliage, sea of clouds, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10125,
+      "filename": "설악산울산바위_운해기암_웅장.png"
+    },
+    {
+      "id": "K026",
+      "scope": "korea",
+      "name_ko": "정동진",
+      "name_en": "Jeongdongjin",
+      "country": "대한민국",
+      "region": "강릉",
+      "category": "coast",
+      "mood": "warm",
+      "tags": [
+        "sunrise",
+        "railway",
+        "hopeful"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Jeongdongjin, Gangneung, East Sea sunrise, sandy beach, seaside railway, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10126,
+      "filename": "정동진_해변철길_희망.png"
+    },
+    {
+      "id": "K027",
+      "scope": "korea",
+      "name_ko": "낙산사 의상대",
+      "name_en": "Uisangdae, Naksansa",
+      "country": "대한민국",
+      "region": "양양",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "cliff",
+        "pine",
+        "sunrise"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Uisangdae Pavilion, Naksansa Temple, Yangyang, seaside cliff, pine tree, East Sea sunrise, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10127,
+      "filename": "낙산사의상대_소나무정자_경건.png"
+    },
+    {
+      "id": "K028",
+      "scope": "korea",
+      "name_ko": "남이섬 메타세쿼이아길",
+      "name_en": "Nami Island",
+      "country": "대한민국",
+      "region": "춘천",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "autumn",
+        "romantic",
+        "tree-lined"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Nami Island, Chuncheon, metasequoia tree lined road, autumn foliage, soft afternoon light, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10128,
+      "filename": "남이섬메타세쿼이아길_황금가로수_낭만.png"
+    },
+    {
+      "id": "K029",
+      "scope": "korea",
+      "name_ko": "전주 한옥마을",
+      "name_en": "Jeonju Hanok Village",
+      "country": "대한민국",
+      "region": "전주",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "hanok",
+        "evening",
+        "cozy"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Jeonju Hanok Village, hanok rooftops, view from Omokdae, evening glow, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10129,
+      "filename": "전주한옥마을_기와지붕_아늑.png"
+    },
+    {
+      "id": "K030",
+      "scope": "korea",
+      "name_ko": "죽녹원",
+      "name_en": "Juknokwon Bamboo Forest",
+      "country": "대한민국",
+      "region": "담양",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "bamboo",
+        "quiet",
+        "green"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Juknokwon Bamboo Forest, Damyang, tall bamboo, walking path, sunlight filtering through, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10130,
+      "filename": "죽녹원_대나무숲길_고요.png"
+    },
+    {
+      "id": "K031",
+      "scope": "korea",
+      "name_ko": "메타세쿼이아 가로수길",
+      "name_en": "Damyang Metasequoia Road",
+      "country": "대한민국",
+      "region": "담양",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "autumn",
+        "tree tunnel",
+        "slow"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Metasequoia Road, Damyang, tall trees tunnel, autumn orange foliage, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10131,
+      "filename": "메타세쿼이아가로수길_주황빛나무터널_따스함.png"
+    },
+    {
+      "id": "K032",
+      "scope": "korea",
+      "name_ko": "보성 녹차밭",
+      "name_en": "Boseong Green Tea Plantation",
+      "country": "대한민국",
+      "region": "보성",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "green",
+        "terraced",
+        "misty"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Boseong Green Tea Plantation, terraced tea fields, morning fog, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10132,
+      "filename": "보성녹차밭_초록차밭_싱그러움.png"
+    },
+    {
+      "id": "K033",
+      "scope": "korea",
+      "name_ko": "순천만 습지",
+      "name_en": "Suncheon Bay Wetland",
+      "country": "대한민국",
+      "region": "순천",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "reeds",
+        "sunset",
+        "vast"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Suncheon Bay Wetland, golden reed fields, S-shaped waterway, sunset, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10133,
+      "filename": "순천만습지_황금갈대물길_서정.png"
+    },
+    {
+      "id": "K034",
+      "scope": "korea",
+      "name_ko": "여수 돌산대교",
+      "name_en": "Dolsan Bridge, Yeosu",
+      "country": "대한민국",
+      "region": "여수",
+      "category": "coast",
+      "mood": "night",
+      "tags": [
+        "night sea",
+        "romantic",
+        "lights"
+      ],
+      "axes": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "prompt": "Dolsan Bridge, Yeosu, night sea, city lights reflection, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10134,
+      "filename": "여수돌산대교_푸른밤바다_낭만.png"
+    },
+    {
+      "id": "K035",
+      "scope": "korea",
+      "name_ko": "동피랑 벽화마을",
+      "name_en": "Dongpirang Mural Village",
+      "country": "대한민국",
+      "region": "통영",
+      "category": "city",
+      "mood": "warm",
+      "tags": [
+        "colorful",
+        "harbor",
+        "cheerful"
+      ],
+      "axes": [
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        2,
+        0
+      ],
+      "prompt": "Dongpirang Mural Village, Tongyeong, colorful murals, harbor view, sunny afternoon, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10135,
+      "filename": "동피랑벽화마을_항구벽화_경쾌.png"
+    },
+    {
+      "id": "K036",
+      "scope": "korea",
+      "name_ko": "거제 바람의 언덕",
+      "name_en": "Windy Hill, Geoje",
+      "country": "대한민국",
+      "region": "거제",
+      "category": "coast",
+      "mood": "nature",
+      "tags": [
+        "windmill",
+        "grassy",
+        "breezy"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Windy Hill, Geoje, windmill, grassy hill, ocean, sunset, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10136,
+      "filename": "거제바람의언덕_풍차언덕_평온.png"
+    },
+    {
+      "id": "K037",
+      "scope": "korea",
+      "name_ko": "남해 다랭이마을",
+      "name_en": "Darangi Village",
+      "country": "대한민국",
+      "region": "남해",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "terraced",
+        "seaside",
+        "slow"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Darangi Village, Namhae, terraced rice paddies by the sea, morning light, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10137,
+      "filename": "남해다랭이마을_초록다랭이논_목가.png"
+    },
+    {
+      "id": "K038",
+      "scope": "korea",
+      "name_ko": "진해 여좌천",
+      "name_en": "Yeojwacheon Stream",
+      "country": "대한민국",
+      "region": "창원 진해",
+      "category": "nature",
+      "mood": "warm",
+      "tags": [
+        "cherry blossom",
+        "spring",
+        "romantic"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Yeojwacheon Stream, Jinhae, cherry blossom tunnel, small bridge, spring, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10138,
+      "filename": "진해여좌천_벚꽃돌다리_로맨틱.png"
+    },
+    {
+      "id": "K039",
+      "scope": "korea",
+      "name_ko": "꽃지해수욕장",
+      "name_en": "Kkotji Beach",
+      "country": "대한민국",
+      "region": "태안",
+      "category": "coast",
+      "mood": "warm",
+      "tags": [
+        "sunset",
+        "tidal flat",
+        "calm"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -1,
+        1,
+        0
+      ],
+      "prompt": "Kkotji Beach, Taean, Halmi Halabi rocks, sunset, tidal flat reflections, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10139,
+      "filename": "꽃지해수욕장_바위섬노을_평온.png"
+    },
+    {
+      "id": "K040",
+      "scope": "korea",
+      "name_ko": "도담삼봉",
+      "name_en": "Dodamsambong Peaks",
+      "country": "대한민국",
+      "region": "단양",
+      "category": "nature",
+      "mood": "dreamy",
+      "tags": [
+        "misty",
+        "river",
+        "poetic"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Dodamsambong Peaks, Danyang, three rock peaks in river, morning mist, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10140,
+      "filename": "도담삼봉_안개강봉우리_서정.png"
+    },
+    {
+      "id": "K041",
+      "scope": "korea",
+      "name_ko": "지리산 노고단 운해",
+      "name_en": "Nogodan, Jirisan",
+      "country": "대한민국",
+      "region": "구례",
+      "category": "mountain",
+      "mood": "dreamy",
+      "tags": [
+        "sea of clouds",
+        "sunrise",
+        "quiet"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -2,
+        1
+      ],
+      "prompt": "Nogodan Peak, Jirisan National Park, sea of clouds, sunrise, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10141,
+      "filename": "지리산노고단운해_운해봉우리_장엄.png"
+    },
+    {
+      "id": "K042",
+      "scope": "korea",
+      "name_ko": "내장산 단풍",
+      "name_en": "Naejangsan Autumn Foliage",
+      "country": "대한민국",
+      "region": "정읍",
+      "category": "nature",
+      "mood": "passion",
+      "tags": [
+        "red maple",
+        "vivid",
+        "autumn"
+      ],
+      "axes": [
+        2,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        1,
+        2
+      ],
+      "prompt": "Naejangsan National Park, red maple foliage, Uhwajeong pavilion, autumn, rich red and orange tones, high contrast, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10142,
+      "filename": "내장산단풍_붉은단풍정자_강렬.png"
+    },
+    {
+      "id": "K043",
+      "scope": "korea",
+      "name_ko": "울릉도 행남해안산책로",
+      "name_en": "Haengnam Coastal Walkway, Ulleungdo",
+      "country": "대한민국",
+      "region": "울릉",
+      "category": "island",
+      "mood": "cool",
+      "tags": [
+        "cobalt sea",
+        "cliffs",
+        "remote"
+      ],
+      "axes": [
+        -2,
+        0,
+        1,
+        0,
+        2,
+        1,
+        -1,
+        1
+      ],
+      "prompt": "Ulleungdo Island, volcanic cliffs, Haengnam coastal walkway, cobalt blue sea, cool blue tones, crisp clear air, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10143,
+      "filename": "울릉도행남해안산책로_코발트해안절벽_청량.png"
+    },
+    {
+      "id": "K044",
+      "scope": "korea",
+      "name_ko": "송도 센트럴파크",
+      "name_en": "Songdo Central Park",
+      "country": "대한민국",
+      "region": "인천",
+      "category": "city",
+      "mood": "night",
+      "tags": [
+        "modern",
+        "canal",
+        "skyline"
+      ],
+      "axes": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "prompt": "Songdo Central Park, Incheon, modern skyscrapers, canal, night lights, vibrant city lights, deep blue night tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10144,
+      "filename": "송도센트럴파크_수변스카이라인_도회적.png"
+    },
+    {
+      "id": "K045",
+      "scope": "korea",
+      "name_ko": "수원 화성",
+      "name_en": "Hwaseong Fortress",
+      "country": "대한민국",
+      "region": "수원",
+      "category": "heritage",
+      "mood": "retro",
+      "tags": [
+        "fortress",
+        "sunset",
+        "traditional"
+      ],
+      "axes": [
+        -1,
+        -2,
+        -1,
+        -2,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "prompt": "Hwaseong Fortress, Suwon, Banghwasuryujeong pavilion, fortress wall, sunset, nostalgic film tones, subtle film grain, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10145,
+      "filename": "수원화성_성곽길노을_고풍.png"
+    },
+    {
+      "id": "K046",
+      "scope": "korea",
+      "name_ko": "부여 궁남지",
+      "name_en": "Gungnamji Pond",
+      "country": "대한민국",
+      "region": "부여",
+      "category": "heritage",
+      "mood": "dreamy",
+      "tags": [
+        "lotus",
+        "calm",
+        "summer"
+      ],
+      "axes": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Gungnamji Pond, Buyeo, lotus flowers, wooden bridge, pavilion, summer morning, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10146,
+      "filename": "부여궁남지_연꽃정자_고요.png"
+    },
+    {
+      "id": "K047",
+      "scope": "korea",
+      "name_ko": "호미곶 상생의 손",
+      "name_en": "Hand of Harmony, Homigot",
+      "country": "대한민국",
+      "region": "포항",
+      "category": "landmark",
+      "mood": "warm",
+      "tags": [
+        "sunrise",
+        "hopeful",
+        "sea"
+      ],
+      "axes": [
+        0,
+        -1,
+        0,
+        -1,
+        -2,
+        -2,
+        2,
+        0
+      ],
+      "prompt": "Homigot, Pohang, Hand of Harmony sculpture in the sea, sunrise, warm color palette, soft golden tones, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10147,
+      "filename": "호미곶상생의손_일출조형물_희망.png"
+    },
+    {
+      "id": "K048",
+      "scope": "korea",
+      "name_ko": "고창 청보리밭",
+      "name_en": "Gochang Green Barley Field",
+      "country": "대한민국",
+      "region": "고창",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "green",
+        "rolling hills",
+        "spring"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Gochang green barley field, rolling hills, spring breeze, soft daylight, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10148,
+      "filename": "고창청보리밭_초록보리물결_싱그러움.png"
+    },
+    {
+      "id": "K049",
+      "scope": "korea",
+      "name_ko": "신안 퍼플섬",
+      "name_en": "Purple Island, Sinan",
+      "country": "대한민국",
+      "region": "신안",
+      "category": "island",
+      "mood": "dreamy",
+      "tags": [
+        "purple",
+        "playful",
+        "sunset"
+      ],
+      "axes": [
+        -2,
+        -1,
+        -2,
+        -1,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "prompt": "Purple Island, Banwoldo, Sinan, purple footbridge over the sea, sunset, soft pastel tones, ethereal haze, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10149,
+      "filename": "신안퍼플섬_보라다리_몽환.png"
+    },
+    {
+      "id": "K050",
+      "scope": "korea",
+      "name_ko": "대관령 양떼목장",
+      "name_en": "Daegwallyeong Sheep Farm",
+      "country": "대한민국",
+      "region": "평창",
+      "category": "nature",
+      "mood": "nature",
+      "tags": [
+        "pasture",
+        "peaceful",
+        "green"
+      ],
+      "axes": [
+        -2,
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "prompt": "Daegwallyeong Sheep Farm, Pyeongchang, green rolling pasture, sheep, wooden fence, lush natural greens, fresh atmosphere, professional travel magazine photo, photorealistic, landscape photography, shot on full-frame camera, highly detailed, sharp focus, 8k resolution, cinematic atmosphere",
+      "seed": 10150,
+      "filename": "대관령양떼목장_양떼초원_평화.png"
+    }
+  ]
+}
