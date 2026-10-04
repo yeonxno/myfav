@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1560" viewBox="0 0 2000 1560"><defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="#64748b"/></marker></defs>
+<rect x='0' y='0' width='2000' height='1560' fill='#f4f7fb' stroke='#f4f7fb' stroke-width='2'/>
+<text x='55' y='83' font-family='Malgun Gothic, sans-serif' font-size='46' font-weight='700' fill='#14263f'>취향 번역기 · 시스템 구성도</text>
+<text x='58' y='127' font-family='Malgun Gothic, sans-serif' font-size='23' font-weight='400' fill='#61758c'>MYFAV   /   현재 코드 + docs 교차 분석   /   2026.10.04</text>
+<rect x='60' y='170' width='490' height='115' fill='#e8f0ff' stroke='#d5deea' stroke-width='2'/>
+<text x='82' y='217' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>프론트 빌드 · React 19 / TS</text>
+<text x='82' y='258' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>Vite → dist → ait build → myfav.ait</text>
+<line x1='550' y1='228' x2='700' y2='228' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<text x='577' y='210' font-family='Malgun Gothic, sans-serif' font-size='20' font-weight='400' fill='#17263b'>ait deploy</text>
+<rect x='710' y='170' width='590' height='115' fill='#e8f0ff' stroke='#d5deea' stroke-width='2'/>
+<text x='732' y='217' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>앱인토스 배포</text>
+<text x='732' y='258' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>번들 업로드 → 검토·출시 → 토스 앱에서 실행</text>
+<rect x='1480' y='170' width='460' height='115' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='1502' y='217' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>그림 읽는 법</text>
+<text x='1502' y='258' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>화살표: 요청·호출 방향 (응답은 역방향)</text>
+<text x='65' y='352' font-family='Malgun Gothic, sans-serif' font-size='25' font-weight='700' fill='#235bc1'>01  사용자 단말</text>
+<rect x='60' y='375' width='450' height='690' fill='#eaf1ff' stroke='#c5d7f7' stroke-width='2'/>
+<rect x='80' y='395' width='410' height='240' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='102' y='442' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>토스 앱 · WebView</text>
+<text x='102' y='483' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>iOS / Android</text>
+<text x='102' y='517' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>React 미니앱 화면</text>
+<text x='102' y='551' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>음악 선택 → 분석 → 취향 프로필</text>
+<text x='102' y='585' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>영화 · 책 · 여행 · 향수 추천</text>
+<text x='102' y='619' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>반응 스탬프 · 지난 이슈 조회</text>
+<rect x='80' y='660' width='410' height='180' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='102' y='707' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>기기 식별 · 플랫폼 연동</text>
+<text x='102' y='748' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>익명 device_id 저장</text>
+<text x='102' y='782' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>Toss Storage / localStorage 폴백</text>
+<text x='102' y='816' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>SDK 공유 · 딥링크 · 뒤로가기</text>
+<rect x='80' y='865' width='410' height='175' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='102' y='912' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>API 클라이언트</text>
+<text x='102' y='953' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>VITE_API_BASE_URL</text>
+<text x='102' y='987' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>JSON + X-Device-Id</text>
+<text x='102' y='1021' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>상태 조회: 1초 간격 / 최대 60초</text>
+<text x='645' y='352' font-family='Malgun Gothic, sans-serif' font-size='25' font-weight='700' fill='#087a69'>02  운영 PC · 현재 임시 서버 구성</text>
+<rect x='640' y='375' width='720' height='920' fill='#e7f5f0' stroke='#b6ddcf' stroke-width='2'/>
+<rect x='665' y='395' width='670' height='105' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='687' y='442' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>Cloudflare Quick Tunnel</text>
+<text x='687' y='483' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>공개 HTTPS → cloudflared → 127.0.0.1:8001</text>
+<line x1='510' y1='450' x2='660' y2='450' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<text x='522' y='430' font-family='Malgun Gothic, sans-serif' font-size='19' font-weight='400' fill='#17263b'>HTTPS API</text>
+<line x1='1000' y1='500' x2='1000' y2='540' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<rect x='665' y='545' width='670' height='180' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='687' y='592' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>FastAPI · Uvicorn</text>
+<text x='687' y='633' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>/api/v1  ·  기기 / 홈 / 음악 검색 / 분석</text>
+<text x='687' y='667' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>이슈 / 분야별 추천 / 상세 / 스탬프 / 기록 삭제</text>
+<text x='687' y='701' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>GET /music/search → iTunes 조회 · 60초 캐시</text>
+<line x1='1000' y1='725' x2='1000' y2='768' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<rect x='665' y='775' width='670' height='230' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='687' y='822' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>분석 파이프라인 · BackgroundTasks</text>
+<text x='687' y='863' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>POST /analyses → 202 + analysis_id 즉시 반환</text>
+<text x='687' y='897' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>취향 1 + 분야별 2묶음 × 4 = AI 9개 병렬 호출</text>
+<text x='687' y='931' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>후보 조회 병렬 실행 → 분야별 최대 3개 채택</text>
+<text x='687' y='965' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>8축 연결 점수 계산 → 결과 저장 → done</text>
+<text x='687' y='999' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>동일 기기·곡 조합은 기존 이슈 재사용</text>
+<line x1='830' y1='1005' x2='830' y2='1048' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<line x1='1190' y1='1048' x2='1190' y2='1005' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<rect x='665' y='1055' width='670' height='215' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='687' y='1102' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>MySQL · SQLAlchemy + PyMySQL</text>
+<text x='687' y='1143' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>기록: device / analysis / issue / issue_track</text>
+<text x='687' y='1177' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>추천·반응: recommendation / stamp</text>
+<text x='687' y='1211' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>자체 데이터: perfume / image_pool</text>
+<text x='687' y='1245' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>향수 약 150건 · 이미지 파일명과 URL 저장</text>
+<text x='1485' y='352' font-family='Malgun Gothic, sans-serif' font-size='25' font-weight='700' fill='#8b50ab'>03  외부 서비스</text>
+<rect x='1480' y='395' width='460' height='145' fill='#f7effc' stroke='#d5deea' stroke-width='2'/>
+<text x='1502' y='442' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>Apple iTunes Search</text>
+<text x='1502' y='483' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>곡명 · 아티스트 · 장르 · 앨범 아트</text>
+<text x='1502' y='517' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>음악 검색은 백엔드가 대신 호출</text>
+<line x1='1335' y1='625' x2='1410' y2='625' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<line x1='1410' y1='625' x2='1410' y2='466' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<line x1='1410' y1='466' x2='1475' y2='466' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<rect x='1480' y='590' width='460' height='160' fill='#f7effc' stroke='#d5deea' stroke-width='2'/>
+<text x='1502' y='637' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>AI 제공사</text>
+<text x='1502' y='678' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>현재: Anthropic</text>
+<text x='1502' y='712' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>전환 가능: OpenAI (환경변수 설정)</text>
+<text x='1502' y='746' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>곡 메타데이터 → 취향·추천 JSON</text>
+<line x1='1335' y1='825' x2='1430' y2='825' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<line x1='1430' y1='825' x2='1430' y2='675' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<line x1='1430' y1='675' x2='1475' y2='675' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<rect x='1480' y='800' width='460' height='210' fill='#f7effc' stroke='#d5deea' stroke-width='2'/>
+<text x='1502' y='847' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>추천 후보 정보 조회</text>
+<text x='1502' y='888' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>TMDB → 영화 정보·포스터</text>
+<text x='1502' y='922' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>카카오 책 검색 → 도서 정보·표지</text>
+<text x='1502' y='956' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>OpenTripMap → 여행지 검증</text>
+<text x='1502' y='990' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>향수는 MySQL 자체 데이터와 대조</text>
+<line x1='1335' y1='905' x2='1475' y2='905' stroke='#64748b' stroke-width='3' marker-end='url(#a)'/>
+<rect x='1480' y='1055' width='460' height='215' fill='#fff7e9' stroke='#d5deea' stroke-width='2'/>
+<text x='1502' y='1102' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>이미지 전달</text>
+<text x='1502' y='1143' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>여행·무드: PC의 이미지 파일</text>
+<text x='1502' y='1177' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>FastAPI /static/travel/* 로 제공</text>
+<text x='1502' y='1211' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>앨범·포스터·책 표지: 외부 URL</text>
+<text x='1502' y='1245' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>화면에서 URL로 이미지 로드</text>
+<rect x='60' y='1080' width='450' height='215' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='82' y='1127' font-family='Malgun Gothic, sans-serif' font-size='27' font-weight='700' fill='#17263b'>사용자에게 제공되는 결과</text>
+<text x='82' y='1168' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>8개 감각 축 · 취향 이름 · 태그</text>
+<text x='82' y='1202' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>추천 최대 12건 + 연결 이유</text>
+<text x='82' y='1236' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>서버에 이슈 보관 · 전체 삭제</text>
+<text x='82' y='1270' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>공유 링크로 취향 프로필 조회</text>
+<rect x='60' y='1330' width='1880' height='165' fill='#ffffff' stroke='#d5deea' stroke-width='2'/>
+<text x='82' y='1377' font-family='Malgun Gothic, sans-serif' font-size='26' font-weight='700' fill='#17263b'>현재 구현 기준 · 문서와 다른 점</text>
+<text x='82' y='1419' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>iTunes 직접 호출 → 서버 프록시   |   AI 단일 호출 → 9개 병렬 호출   |   화면 분석 제한 30초 → 60초</text>
+<text x='82' y='1457' font-family='Malgun Gothic, sans-serif' font-size='22' font-weight='400' fill='#465870'>후순위: 친구 궁합·취향 변화  /  카드 이미지 저장: 미구현  /  PC·MySQL·백엔드·터널이 실행 중이어야 API 이용 가능</text>
+<text x='65' y='1532' font-family='Malgun Gothic, sans-serif' font-size='18' font-weight='400' fill='#61758c'>근거: API·DB·기능·화면흐름 명세, backend/README, src/api·platform, backend/app·db   |   키·개인정보·임시 도메인은 생략</text>
+</svg>
