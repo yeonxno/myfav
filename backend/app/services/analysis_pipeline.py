@@ -1,30 +1,36 @@
 """
 분석 파이프라인. API명세서 7.3절 흐름(AI 호출 → 분야별 외부 조회 동시 진행 → 채택·저장)을 구현한다.
 POST /analyses 응답 후 백그라운드에서 실행된다(FastAPI BackgroundTasks).
+외부 조회는 4분야 x 후보 5건을 모두 동시에 실행한다.
 """
 
 from __future__ import annotations
 
 import datetime
 import logging
+import time
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any
-
-logger = logging.getLogger("app.analysis_pipeline")
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.constants.values import RECOMMENDATION_CANDIDATES_REQUESTED, RECOMMENDATIONS_PER_CATEGORY
+from app.constants.values import (
+    EXTERNAL_LOOKUP_WORKERS,
+    RECOMMENDATION_CANDIDATES_REQUESTED,
+    RECOMMENDATIONS_PER_CATEGORY,
+)
 from app.core.config import Settings, get_settings
 from app.core.database import SessionLocal
 from app.models import Analysis, ImagePool, Issue, IssueTrack, Perfume, Recommendation
 from app.schemas.ai import AnalyzeResult, RecommendationCandidate
-from app.services.ai import AIResponseInvalidError, analyze_taste
+from app.services.ai import AIResponseInvalidError, AITimeoutError, analyze_taste
 from app.services.external.kakao_book import search_book
 from app.services.external.opentripmap import place_exists
 from app.services.external.tmdb import fetch_movie
 from app.services.match_score import compute_match_score
+
+logger = logging.getLogger("app.analysis_pipeline")
 
 CategoryResult = tuple[str, dict[str, Any] | None]
 
@@ -46,8 +52,15 @@ def _fetch_book_candidate(settings: Settings, candidate: RecommendationCandidate
 def _fetch_travel_candidate(
     settings: Settings, candidate: RecommendationCandidate, image_lookup: dict[str, str]
 ) -> dict | None:
-    if not candidate.name_en or not place_exists(settings, candidate.name_en):
+    if not candidate.name_en:
         return None
+    verified = place_exists(settings, candidate.name_en)
+    if not verified:
+        # OpenTripMap의 지명 표기 차이로 실제 여행지를 전부 버리지 않는다. 이미지 풀에 있는
+        # 파일만 허용하므로 임의 URL은 저장하지 않는다.
+        if not candidate.image or candidate.image not in image_lookup:
+            return None
+        logger.warning("여행지 외부 검증 실패, AI 후보를 유지합니다: %s", candidate.name_en)
     meta = " · ".join(filter(None, [candidate.country, candidate.season, candidate.travel_type]))
     return {
         "source": "opentripmap",
@@ -58,59 +71,77 @@ def _fetch_travel_candidate(
     }
 
 
-def _fetch_perfume_candidate(candidate: RecommendationCandidate, perfumes: dict[str, Perfume]) -> dict | None:
+def _fetch_perfume_candidate(candidate: RecommendationCandidate, perfumes: dict[str, dict]) -> dict | None:
     perfume = perfumes.get(candidate.perfume_id or "")
     if not perfume:
         return None
-    notes_preview = " · ".join(perfume.notes[:3])
+    notes_preview = " · ".join(perfume["notes"][:3])
     return {
         "source": "perfume_db",
-        "source_id": perfume.perfume_id,
-        "title": perfume.name,
-        "meta": f"{perfume.name} · {perfume.family} · {notes_preview}".strip(" ·"),
-        "image_url": perfume.image_url,
+        "source_id": perfume["perfume_id"],
+        "title": perfume["name"],
+        "meta": f"{perfume['name']} · {perfume['family']} · {notes_preview}".strip(" ·"),
+        "image_url": perfume["image_url"],
     }
 
 
-def _resolve_category(
+def _lookup_candidate(
     category: str,
-    candidates: list[RecommendationCandidate],
+    candidate: RecommendationCandidate,
     settings: Settings,
-    perfumes_by_id: dict[str, Perfume],
+    perfumes_by_id: dict[str, dict],
     image_lookup: dict[str, str],
-) -> list[dict]:
-    resolved: list[dict] = []
-    for candidate in candidates[:RECOMMENDATION_CANDIDATES_REQUESTED]:
-        if len(resolved) >= RECOMMENDATIONS_PER_CATEGORY:
-            break
-        found: dict | None = None
-        try:
-            if category == "movie":
-                found = _fetch_movie_candidate(settings, candidate)
-            elif category == "book":
-                found = _fetch_book_candidate(settings, candidate)
-            elif category == "travel":
-                found = _fetch_travel_candidate(settings, candidate, image_lookup)
-            elif category == "perfume":
-                found = _fetch_perfume_candidate(candidate, perfumes_by_id)
-        except Exception:  # noqa: BLE001 - 후보 하나의 외부 API 오류가 전체 분야를 망치지 않게 한다
-            logger.exception("추천 후보 조회 실패 (category=%s, title=%s)", category, candidate.title)
+) -> dict | None:
+    try:
+        if category == "movie":
+            found = _fetch_movie_candidate(settings, candidate)
+        elif category == "book":
+            found = _fetch_book_candidate(settings, candidate)
+        elif category == "travel":
+            found = _fetch_travel_candidate(settings, candidate, image_lookup)
+        elif category == "perfume":
+            found = _fetch_perfume_candidate(candidate, perfumes_by_id)
+        else:
             found = None
+    except Exception:  # noqa: BLE001 - 후보 하나의 외부 API 오류가 전체 분야를 망치지 않게 한다
+        logger.exception("추천 후보 조회 실패 (category=%s, title=%s)", category, candidate.title)
+        return None
 
-        if not found:
-            continue
+    if not found:
+        return None
+    return {
+        **found,
+        "description": candidate.description,
+        "reason": candidate.reason,
+        "mappings": [m.model_dump() for m in candidate.mappings],
+        "evidence": candidate.evidence,
+        "tags": candidate.tags,
+        "axes": candidate.axes.as_dict(),
+    }
 
-        resolved.append(
-            {
-                **found,
-                "description": candidate.description,
-                "reason": candidate.reason,
-                "mappings": [m.model_dump() for m in candidate.mappings],
-                "evidence": candidate.evidence,
-                "tags": candidate.tags,
-                "axes": candidate.axes.as_dict(),
-            }
-        )
+
+def _resolve_all(
+    candidates_by_category: dict[str, list[RecommendationCandidate]],
+    settings: Settings,
+    perfumes_by_id: dict[str, dict],
+    image_lookup: dict[str, str],
+) -> dict[str, list[dict]]:
+    """
+    모든 분야의 후보를 한꺼번에 동시 조회한다(분야당 최대 5건 x 4분야).
+    채택은 기능명세서 3.5절대로 AI가 낸 후보 순서를 지켜, 조회에 성공한 앞쪽 3건을 고른다.
+    """
+    with ThreadPoolExecutor(max_workers=EXTERNAL_LOOKUP_WORKERS) as pool:
+        futures = {
+            category: [
+                pool.submit(_lookup_candidate, category, candidate, settings, perfumes_by_id, image_lookup)
+                for candidate in candidates[:RECOMMENDATION_CANDIDATES_REQUESTED]
+            ]
+            for category, candidates in candidates_by_category.items()
+        }
+        resolved: dict[str, list[dict]] = {}
+        for category, category_futures in futures.items():
+            found = [item for item in (f.result() for f in category_futures) if item]
+            resolved[category] = found[:RECOMMENDATIONS_PER_CATEGORY]
     return resolved
 
 
@@ -131,40 +162,73 @@ def run_analysis(analysis_id: str) -> None:
         perfumes = db.execute(select(Perfume)).scalars().all()
         images = db.execute(select(ImagePool)).scalars().all()
         perfume_dicts = [
-            {"perfume_id": p.perfume_id, "name": p.name, "brand": p.brand, "family": p.family, "notes": p.notes}
+            {
+                "perfume_id": p.perfume_id,
+                "name": p.name,
+                "brand": p.brand,
+                "family": p.family,
+                "notes": p.notes,
+                "image_url": p.image_url,
+            }
             for p in perfumes
         ]
-        perfumes_by_id = {p.perfume_id: p for p in perfumes}
+        # 외부 조회는 여러 스레드에서 동시에 돌기 때문에 ORM 객체(세션에 묶여 있어 스레드 안전하지 않음)
+        # 대신 평범한 dict를 넘긴다.
+        perfumes_by_id = {p["perfume_id"]: p for p in perfume_dicts}
         image_lookup = {img.file_name: img.image_url for img in images}
         image_names = list(image_lookup.keys())
 
+        ai_started = time.monotonic()
         try:
             result: AnalyzeResult = analyze_taste(settings, tracks, perfume_dicts, image_names)
-        except AIResponseInvalidError as exc:
-            logger.error("AI 응답 검증 실패 (analysis_id=%s): %s", analysis_id, exc)
+        except (AIResponseInvalidError, AITimeoutError) as exc:
+            error_code = "AI_TIMEOUT" if isinstance(exc, AITimeoutError) else "AI_RESPONSE_INVALID"
+            logger.error("AI 분석 실패 (analysis_id=%s, %s): %s", analysis_id, error_code, exc)
             analysis.status = "failed"
-            analysis.error_code = "AI_RESPONSE_INVALID"
+            analysis.error_code = error_code
             db.commit()
             return
+        ai_seconds = time.monotonic() - ai_started
+
+        logger.info(
+            "AI 후보 생성 완료 (analysis_id=%s): %s",
+            analysis_id,
+            {
+                "movie": len(result.recommendations.movie),
+                "book": len(result.recommendations.book),
+                "travel": len(result.recommendations.travel),
+                "perfume": len(result.recommendations.perfume),
+            },
+        )
 
         analysis.status = "fetching"
         db.commit()
 
-        with ThreadPoolExecutor(max_workers=4) as pool:
-            futures = {
-                category: pool.submit(
-                    _resolve_category, category, candidates, settings, perfumes_by_id, image_lookup
-                )
-                for category, candidates in (
-                    ("movie", result.recommendations.movie),
-                    ("book", result.recommendations.book),
-                    ("travel", result.recommendations.travel),
-                    ("perfume", result.recommendations.perfume),
-                )
-            }
-            resolved_by_category = {category: future.result() for category, future in futures.items()}
+        fetch_started = time.monotonic()
+        resolved_by_category = _resolve_all(
+            {
+                "movie": result.recommendations.movie,
+                "book": result.recommendations.book,
+                "travel": result.recommendations.travel,
+                "perfume": result.recommendations.perfume,
+            },
+            settings,
+            perfumes_by_id,
+            image_lookup,
+        )
+        logger.info(
+            "분석 단계별 소요 (analysis_id=%s): AI %.1f초, 외부 조회 %.1f초, 채택 %s",
+            analysis_id,
+            ai_seconds,
+            time.monotonic() - fetch_started,
+            {category: len(items) for category, items in resolved_by_category.items()},
+        )
 
         if all(len(items) == 0 for items in resolved_by_category.values()):
+            logger.error(
+                "추천 후보를 모두 검증하지 못했습니다 (analysis_id=%s)",
+                analysis_id,
+            )
             analysis.status = "failed"
             analysis.error_code = "EXTERNAL_API_FAILED"
             db.commit()

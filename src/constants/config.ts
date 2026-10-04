@@ -7,11 +7,13 @@
 /**
  * 분석 제한 시간(초). 기능명세서 2.5절은 30초를 출발값으로 제시하며,
  * 4.2절은 "실제 응답 시간을 재서 조정한다"고 명시한다.
- * 2026-10-02 실기 측정(향수·이미지 150개 포함 실제 규모, Anthropic claude-sonnet-4-6):
- * 1회 샘플은 140초였으나 실사용자 테스트에서 180초를 넘기는 경우가 확인되어
- * 변동폭을 감안해 300초로 올렸다(사용자 승인, 2026-10-02).
+ * 2026-10-03 실측(claude-sonnet-4-6, AI 호출 분리·동시 실행 적용 후): 3회 27.8 / 33.8 / 29.7초.
+ * 최대값 x 1.5(약 51초)에 AI 재요청 1회 여유를 더해 60초로 정했다(사용자 승인, 2026-10-03).
+ * 백엔드 AI 호출 1건의 대기 한도(backend/app/constants/values.py AI_CALL_TIMEOUT_SECONDS)는
+ * 이 값보다 짧아야 한다. 그래야 화면이 포기하기 전에 서버가 먼저 실패를 알려 준다.
+ * (이전 값: 분리 전 140~330초 소요로 300초였다.)
  */
-export const ANALYSIS_TIMEOUT_SECONDS = 300;
+export const ANALYSIS_TIMEOUT_SECONDS = 60;
 
 /** 분석 상태 조회 간격(ms). API명세서 3.5절 */
 export const ANALYSIS_POLL_INTERVAL_MS = 1000;

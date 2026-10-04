@@ -9,5 +9,7 @@ export const ANALYSIS_STEPS: readonly { step: number; label: string }[] = [
 /**
  * 01~03단계 연출 전환 간격(ms). 기능명세서에 "정해진 시간 간격"이라고만 되어 있고
  * 구체적인 값은 없어 새로 정했다. 필요하면 이 값만 조정하면 된다.
+ * 실측 AI 단계가 약 25~32초라, 01→02→03이 그 시간에 고르게 걸쳐 보이도록 7초로 맞췄다
+ * (04단계는 서버가 외부 조회를 시작할 때 표시된다).
  */
-export const ANALYSIS_STEP_INTERVAL_MS = 2500;
+export const ANALYSIS_STEP_INTERVAL_MS = 7000;

@@ -13,8 +13,8 @@
  *   적혀 있지만, 기능명세서 2.20절 표에는 없다. 정책 내용은 기능명세서가 우선이므로
  *   기능명세서 문구(추천 품질 개선 제외)를 따랐다.
  */
-export const LEGAL_EFFECTIVE_DATE = "[2026.00.00]";
-export const TEAM_NAME_PLACEHOLDER = "[팀 이름]";
+export const LEGAL_EFFECTIVE_DATE = "[2026.10.04]";
+export const TEAM_NAME_PLACEHOLDER = "MYFAV";
 
 export interface LegalArticle {
   no: string;

@@ -35,8 +35,16 @@ def search_movie(settings: Settings, query: str, year: int | None) -> dict | Non
 
 
 def fetch_movie(settings: Settings, original_title: str, title: str, year: int | None) -> dict | None:
-    """원제로 먼저 찾고, 없으면 번역 제목으로 다시 찾는다(API명세서 5.3절)."""
-    result = search_movie(settings, original_title, year)
-    if result:
-        return result
-    return search_movie(settings, title, year)
+    """연도 표기 오차를 감안해 원제·번역 제목을 연도 유무로 모두 찾는다."""
+    queries = ((original_title, year), (title, year), (original_title, None), (title, None))
+    tried: set[tuple[str, int | None]] = set()
+    for query, query_year in queries:
+        normalized = query.strip()
+        key = (normalized.casefold(), query_year)
+        if not normalized or key in tried:
+            continue
+        tried.add(key)
+        result = search_movie(settings, normalized, query_year)
+        if result:
+            return result
+    return None
