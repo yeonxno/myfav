@@ -15,7 +15,6 @@ from app.core.errors import register_error_handlers
 from app.routers import analyses, devices, home, issues, music, recommendations
 
 settings = get_settings()
-BACKEND_ROOT = Path(__file__).resolve().parents[1]
 
 # app.* 로거(분석 단계별 소요 시간, AI 재요청 등)를 INFO부터 서버 로그에 남긴다.
 _app_logger = logging.getLogger("app")
@@ -23,9 +22,6 @@ if not _app_logger.handlers:
     _handler = logging.StreamHandler()
     _handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
     _app_logger.addHandler(_handler)
-    _file_handler = logging.FileHandler(BACKEND_ROOT / "analysis-debug.log", encoding="utf-8")
-    _file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s: %(message)s"))
-    _app_logger.addHandler(_file_handler)
     _app_logger.setLevel(logging.INFO)
     _app_logger.propagate = False
 PROJECT_ROOT = Path(__file__).resolve().parents[2]

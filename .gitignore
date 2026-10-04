@@ -10,7 +10,26 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
 *.local
+secrets/
+credentials/
+
+# Private keys, certificates, and mobile signing material
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+mTLS_인증서_*/
 
 # Editor directories and files
 .vscode/*
@@ -33,3 +52,14 @@ backend/*.pyc
 backend/.venv/
 backend/.venv313/
 backend/venv/
+
+# Python test/cache artifacts and local database dumps
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
