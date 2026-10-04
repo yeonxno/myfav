@@ -12,7 +12,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.core.config import get_settings
 from app.core.errors import register_error_handlers
-from app.routers import analyses, devices, home, issues, recommendations
+from app.routers import analyses, devices, home, issues, music, recommendations
 
 settings = get_settings()
 BACKEND_ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +50,7 @@ if TRAVEL_IMAGE_DIR.exists():
 router_prefix = "/api/v1"
 
 app.include_router(devices.router, prefix=router_prefix)
+app.include_router(music.router, prefix=router_prefix)
 app.include_router(home.router, prefix=router_prefix)
 app.include_router(analyses.router, prefix=router_prefix)
 app.include_router(issues.router, prefix=router_prefix)
