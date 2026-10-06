@@ -365,7 +365,7 @@ npm run dev
 
 - **프론트엔드(미니앱)**: `.env.production`에 HTTPS API 주소를 넣고 `npm run build` → `dist/` 번들과 앱인토스 패키지(`myfav.ait`) 생성 → `npm run deploy`(`ait deploy`)로 앱인토스 콘솔에 업로드. **배포는 명시적으로 요청할 때만 실행합니다.**
 - **백엔드**: `uvicorn app.main:app`으로 서빙. 앱은 HTTP로 수신하고 **TLS 종단은 앞단(리버스 프록시·터널)이 담당**합니다. 실제 키·`DATABASE_URL`·`CORS_ORIGINS`·`PUBLIC_BASE_URL`을 환경 변수로 주입합니다.
-- **현재 운영 구성**: 고정 클라우드 서버가 아니라, 운영 PC의 Backend 포트를 HTTPS 터널로 노출하고 있습니다(상세: [`docs/system-architecture-notes.md`](docs/system-architecture-notes.md)).
+- **현재 운영 구성**: 고정 클라우드 서버가 아니라, 운영 PC의 Backend 포트를 HTTPS 터널로 노출하고 있습니다(상세: [`docs/취향번역기_시스템구성도.png`](docs/취향번역기_시스템구성도.png)).
 - **이미지 풀**: 여행지 이미지는 Backend가 `images/travel_image/`를 `/static/travel`로 직접 서빙하므로, 서버에 이 폴더가 함께 있어야 합니다.
 
 ---
@@ -413,7 +413,7 @@ Backend 실측·검증 기록은 [`backend/README.md`](backend/README.md)에 있
 | [`docs/취향번역기_DB설계서.md`](docs/취향번역기_DB설계서.md) | MySQL 스키마 — 테이블 DDL, 관계, 삭제 정책 |
 | [`docs/취향번역기_와이어프레임/`](docs/취향번역기_와이어프레임/) | 화면별 와이어프레임 PNG 26종 (390×844) |
 | [`docs/취향번역기_화면흐름명세.md`](docs/취향번역기_화면흐름명세.md) · [`프로토타입.html`](docs/취향번역기_프로토타입.html) · [`플로우차트.png`](docs/취향번역기_플로우차트.png) | 화면 연결·기능 구조 참고 자료 |
-| [`docs/system-architecture.png`](docs/system-architecture.png) · [`notes`](docs/system-architecture-notes.md) | 시스템 구성도와 근거 |
+| [`docs/취향번역기_시스템구성도.png`](docs/취향번역기_시스템구성도.png) | 시스템 구성도 |
 | [`CLAUDE.md`](CLAUDE.md) | 구현 시 준수 지침 (스택 고정, 앱인토스 제약, 와이어프레임 원본 유지, 편집 가능성 요구사항) |
 
 <div align="center">
